@@ -94,7 +94,7 @@
   }
   .navbar.sticky {
     padding: 15px 0;
-    background: #92bcb5;
+    background: #ffffff;
   }
   .navbar .max-width {
     display: flex;
@@ -107,8 +107,9 @@
     font-weight: 600;
   }
   .navbar .logo a span {
-    color: #92bcb5;
+    color: #ffffff;
     transition: all 0.3s ease;
+    font-size: 45px;
   }
   .navbar.sticky .logo a span {
     color: #000;
@@ -126,10 +127,10 @@
     transition: color 0.3s ease;
   }
   .navbar .menu li a:hover {
-    color: #92bcb5;
+    color: #ffffff80;
   }
   .navbar.sticky .menu li a:hover {
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
   .navbar.sticky .menu li a{
     color: #000;
@@ -150,7 +151,7 @@
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #92bcb5;
+    color: #ffffff;
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -172,7 +173,7 @@
   /* home section styling */
   .home {
     display: flex;
-    background: url("images/bg.jpg") no-repeat center;
+    background: url("BGimage.jpg") no-repeat center;
     background-color: #111;
     height: 100vh;
     color: #fff;
@@ -201,23 +202,23 @@
     margin: 5px 0;
   }
   .home .home-content .text-3 span {
-    color: #92bcb5;
+    color: #ffffff;
     font-weight: 500;
   }
   .home .home-content a {
     display: inline-block;
-    background: #92bcb5;
+    background: #000000;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid #92bcb5;
+    border: 2px solid #0f0f0f;
     transition: all 0.3s ease;
   }
   .home .home-content a:hover {
-    color: #92bcb5;
+    color: #ffffff;
     background: none;
   }
   
@@ -225,7 +226,7 @@
   .about{
   
    
-   background-image: url("https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk2MC1uaW5nLTMwLmpwZw.jpg");
+   background-image: url("");
    background-size: cover;
     background-attachment: fixed;
   }
@@ -248,7 +249,7 @@
     margin-bottom: 10px;
   }
   .about .about-content .right .text span {
-    color: #92bcb5;
+    color: #0e008b;
     
   }
   .about .about-content .right p {
@@ -256,8 +257,8 @@
   }
   .about .about-content .right a {
     display: inline-block;
-    background: #92bcb5;
-    color: #fff;
+    background: #000000;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
@@ -267,7 +268,7 @@
     transition: all 0.3s ease;
   }
   .about .about-content .right a:hover {
-    color: #92bcb5;
+    color: #ffffff;
     background: none;
   }
   .about .title::after {
@@ -275,55 +276,7 @@
     color: red;
   }
   
-  /* services section styling */
-  .services,
-  .project {
-    color: #fff;
-    background: #111;
-  }
-  .services .title::before,
-  .project .title::before {
-    
-    background: #fff;
-  }
-  .services .title::after,
-  .project .title::after {
-    background: #111;
-    /* content: "What I Provide"; */
-  }
-  .services .serv-content .card {
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .services .serv-content .card:hover {
-    background: #92bcb5;
-    color: #555;
-    /* change*/
-  }
-  .services .serv-content .card .box {
-    transition: all 0.3s ease;
-  }
-  .services .serv-content .card:hover .box {
-    transform: scale(1.05);
-  }
-  .services .serv-content .card i {
-    font-size: 50px;
-    color: #92bcb5;
-    transition: color 0.3s ease;
-  }
-  .services .serv-content .card:hover i {
-    color: #000;
-  }
-  .services .serv-content .card .text {
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-  }
+
   
   /* skills section styling */
   .skills-images img {
@@ -361,7 +314,7 @@
   }
   .skills .skills-content .left a {
     display: inline-block;
-    background: #92bcb5;
+    background: #d9e1e6;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -423,7 +376,7 @@
     content: "See My Work";
   } */
   .project .carousel .card {
-    background: #222;
+    background: rgb(255, 255, 255);
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -431,7 +384,7 @@
     transition: all 0.3s ease;
   }
   .project .carousel .card:hover {
-    background: #92bcb5;
+    background: #969696;
     color: #000;
     /* change */
   }
