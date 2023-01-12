@@ -400,6 +400,7 @@
   }
   .project .carousel .card .text {
     font-size: 25px;
+    color: #000;
     font-weight: 500;
     margin: 10px 0 7px 0;
   }
@@ -411,22 +412,27 @@
     height: 45px;
     margin-top: 5%;
     /* border: 2px solid wheat; */
+    color: #000;
   }
   
   .repo-div {
     display: flex;
     width: 35%;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     justify-content: center;
     align-items: center;
+    color: #000;
+    border-radius: 15px;
   }
   
   .demo-div {
     display: flex;
     width: 35%;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     justify-content: center;
     align-items: center;
+    color: #000;
+    border-radius: 15px;
   }
   .techStack {
     color: purple;
@@ -438,7 +444,7 @@
   .demo-div a:link,
   .techStack {
     text-decoration: none;
-    color: white;
+    color: black;
   }
   
   .project .carousel .card img {
@@ -473,6 +479,7 @@
   .owl-dot.active,
   .owl-dot:hover {
     background: #92bcb5 !important;
+    /* border-radius: 0; */
   }
   .skills-images {
     width: 120px;
