@@ -1,0 +1,27 @@
+#calendar {
+  margin-top: 5em;
+  width: 100%;
+}
+
+#month {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.day {
+  display: inline;
+  width: 13.285%;
+  height: 13.285%;
+  padding: 3% 0.5%;
+  float: left;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.day:hover {
+  background-color: lightgray;
+}
+
+.hasEvent {
+  background-color: blue;
+}
