@@ -72,3 +72,12 @@ $(document).ready(function () {
     });
 });
 
+let res = document.getElementById("portfolioDownload")
+res.addEventListener("click", () => {
+    window.open("https://drive.google.com/file/d/1Kc6mMWHNep-eJan4ZsOcARtHedCzEWvx/view?usp=share_link")
+})
+
+let res2 = document.getElementById("portfolioDownload2")
+res2.addEventListener("click", () => {
+    window.open("https://drive.google.com/file/d/1Kc6mMWHNep-eJan4ZsOcARtHedCzEWvx/view?usp=share_link")
+})
