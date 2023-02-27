@@ -793,4 +793,16 @@ margin: auto;
     font-size: 17px;
     font-family: "Poppins", sans-serif;
     transition: all 0.3s ease; 
+    margin-bottom: 20%;
+  }
+
+  .calendar{
+    /* margin: 10%; */
+    margin-top: 80%;
+    border: 1px solid green;
+  }
+  #calendar{
+    /* margin: 10%; */
+    margin-top: 70%;
+    border: 1px solid green;
   }
