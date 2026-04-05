@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply min-h-[100svh] bg-surface bg-mesh-gradient font-body text-gray-300 antialiased;
+    background-attachment: fixed;
+  }
+
+  /* Subtle film grain — soft depth without noise assets */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-white;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    html.cursor-custom-active,
+    html.cursor-custom-active * {
+      cursor: none !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply rounded-2xl border border-white/[0.06] bg-white/[0.035] shadow-glass backdrop-blur-2xl;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/[0.06] bg-white/[0.03] shadow-soft backdrop-blur-2xl transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+    @apply hover:border-accent/20 hover:bg-white/[0.05] hover:shadow-glow;
+  }
+
+  .container-site {
+    @apply mx-auto w-full max-w-6xl px-6 md:px-8 lg:px-12;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-br from-white via-gray-100 to-accent-soft bg-clip-text text-transparent;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent via-accent-soft to-teal-300 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-accent to-teal-400/90 px-8 py-4 font-semibold text-surface shadow-glow-sm;
+    @apply transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] hover:shadow-glow-lg;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.04] px-8 py-4 font-semibold text-white/95 backdrop-blur-md;
+    @apply transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] hover:border-accent/25 hover:bg-white/[0.07];
+  }
+
+  .btn-nav-primary {
+    @apply rounded-xl bg-gradient-to-r from-accent to-teal-400/90 px-4 py-2 text-sm font-semibold text-surface shadow-glow-sm transition duration-500 hover:scale-[1.02] hover:shadow-glow-lg;
+  }
+
+  .nav-link-active {
+    @apply text-white;
+  }
+
+  .nav-link-idle {
+    @apply text-gray-500 transition duration-300 ease-out hover:text-white/95;
+  }
+}
