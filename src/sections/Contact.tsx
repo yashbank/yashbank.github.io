@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { SITE } from '@/assets/content'
+import { SITE_IMAGES } from '@/assets/siteImages'
+import { SectionBackdrop } from '@/components/SectionBackdrop'
 import { SectionHeading } from '@/components/SectionHeading'
 import { fadeInUp } from '@/lib/motion'
 
@@ -24,8 +26,16 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="scroll-mt-20 px-6 py-24 md:px-10 md:py-28 lg:pb-36 lg:pt-32">
-      <div className="container-site">
+    <section
+      id="contact"
+      className="group/section relative scroll-mt-20 overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:pb-40 lg:pt-36"
+    >
+      <SectionBackdrop
+        desktop={SITE_IMAGES.contact.desktop}
+        mobile={SITE_IMAGES.contact.mobile}
+        imageOpacity={0.1}
+      />
+      <div className="container-site relative z-10">
         <SectionHeading
           eyebrow="Contact"
           title="Let's build something sharp"
@@ -42,7 +52,7 @@ export function Contact() {
           >
             <a
               href={`mailto:${SITE.email}`}
-              className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-300 hover:scale-[1.01] hover:border-accent/35 hover:shadow-glow"
+              className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-500 hover:scale-[1.01] hover:border-accent/35 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.4)]"
             >
               <span>
                 <span className="block text-xs uppercase tracking-widest text-gray-500">Email</span>
@@ -54,7 +64,7 @@ export function Contact() {
             </a>
             <a
               href={`tel:${SITE.phoneTel}`}
-              className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-300 hover:scale-[1.01] hover:border-accent/35 hover:shadow-glow"
+              className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-500 hover:scale-[1.01] hover:border-accent/35 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.4)]"
             >
               <span>
                 <span className="block text-xs uppercase tracking-widest text-gray-500">Phone</span>
@@ -68,7 +78,7 @@ export function Contact() {
               href={SITE.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-300 hover:scale-[1.01] hover:border-[#25D366]/40"
+              className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-500 hover:scale-[1.01] hover:border-[#25D366]/40 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.4)]"
             >
               <span>
                 <span className="block text-xs uppercase tracking-widest text-gray-500">

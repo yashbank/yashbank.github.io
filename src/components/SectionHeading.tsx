@@ -11,7 +11,7 @@ export function SectionHeading({ eyebrow, title, subtitle }: Props) {
   const t = fadeInUp.transition
 
   return (
-    <div className="mb-12 max-w-2xl md:mb-16">
+    <div className="mb-14 max-w-2xl md:mb-20">
       {eyebrow ? (
         <motion.p
           initial={fadeInUp.initial}
@@ -28,7 +28,7 @@ export function SectionHeading({ eyebrow, title, subtitle }: Props) {
         whileInView={fadeInUp.animate}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ ...t, delay: 0.05 }}
-        className="font-display text-4xl font-semibold tracking-[-0.02em] text-white/95 md:text-5xl lg:text-6xl"
+        className="font-display text-4xl font-semibold tracking-[-0.025em] text-white md:text-5xl lg:text-[3.25rem] lg:leading-[1.12]"
       >
         {title}
       </motion.h2>
@@ -38,7 +38,7 @@ export function SectionHeading({ eyebrow, title, subtitle }: Props) {
           whileInView={fadeInUp.animate}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ ...t, delay: 0.1 }}
-          className="mt-5 max-w-2xl text-lg leading-[1.65] text-gray-500"
+          className="mt-6 max-w-2xl text-lg leading-[1.72] text-gray-400/95 md:text-xl"
         >
           {subtitle}
         </motion.p>

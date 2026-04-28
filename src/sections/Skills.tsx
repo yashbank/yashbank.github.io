@@ -1,13 +1,23 @@
 import { motion } from 'framer-motion'
 import { SKILL_CATEGORIES } from '@/assets/content'
+import { SITE_IMAGES } from '@/assets/siteImages'
+import { SectionBackdrop } from '@/components/SectionBackdrop'
 import { SectionHeading } from '@/components/SectionHeading'
 import { TechIcon } from '@/components/TechIcon'
 import { staggerContainer, staggerItem } from '@/lib/motion'
 
 export function Skills() {
   return (
-    <section id="skills" className="scroll-mt-20 px-6 py-24 md:px-10 md:py-28 lg:py-36">
-      <div className="container-site">
+    <section
+      id="skills"
+      className="group/section relative scroll-mt-20 overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:py-44"
+    >
+      <SectionBackdrop
+        desktop={SITE_IMAGES.skills.desktop}
+        mobile={SITE_IMAGES.skills.mobile}
+        imageOpacity={0.12}
+      />
+      <div className="container-site relative z-10">
         <SectionHeading
           eyebrow="Skills"
           title="Stack & craft"
@@ -25,7 +35,7 @@ export function Skills() {
             <motion.div
               key={category.title}
               variants={staggerItem}
-              className="group/card rounded-3xl border border-white/[0.05] bg-gradient-to-b from-white/[0.04] to-transparent p-6 shadow-soft backdrop-blur-xl transition duration-500 hover:border-white/[0.09] hover:from-white/[0.06] sm:p-8"
+              className="group/card rounded-3xl border border-white/[0.06] bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-6 shadow-soft backdrop-blur-xl transition duration-500 hover:-translate-y-0.5 hover:border-white/[0.1] hover:from-white/[0.08] hover:shadow-[0_20px_50px_-24px_rgba(0,0,0,0.45)] sm:p-8"
             >
               <h3 className="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-accent/85">
                 {category.title}

@@ -21,9 +21,9 @@ export default {
           muted: 'rgba(232, 93, 111, 0.12)',
         },
         surface: {
-          DEFAULT: '#08090d',
-          elevated: '#0e1018',
-          muted: '#131520',
+          DEFAULT: '#090a10',
+          elevated: '#10111a',
+          muted: '#151622',
         },
       },
       boxShadow: {
@@ -36,7 +36,7 @@ export default {
       },
       backgroundImage: {
         'mesh-gradient':
-          'radial-gradient(ellipse 100% 85% at 50% -38%, rgba(159, 143, 255, 0.14), transparent 52%), radial-gradient(ellipse 70% 55% at 108% 22%, rgba(99, 102, 241, 0.1), transparent 50%), radial-gradient(ellipse 55% 48% at -5% 92%, rgba(56, 189, 248, 0.06), transparent 46%), radial-gradient(circle at 88% 6%, rgba(232, 93, 111, 0.09), transparent 42%), radial-gradient(ellipse 50% 35% at 20% 100%, rgba(167, 139, 250, 0.05), transparent 50%)',
+          'radial-gradient(ellipse 100% 88% at 50% -36%, rgba(159, 143, 255, 0.11), transparent 54%), radial-gradient(ellipse 72% 58% at 106% 24%, rgba(99, 102, 241, 0.07), transparent 52%), radial-gradient(ellipse 58% 50% at -4% 90%, rgba(56, 189, 248, 0.045), transparent 48%), radial-gradient(circle at 90% 8%, rgba(232, 93, 111, 0.06), transparent 44%), radial-gradient(ellipse 52% 38% at 18% 100%, rgba(167, 139, 250, 0.04), transparent 52%)',
         'jp-seigaiha':
           "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.055' stroke-width='0.55'%3E%3Cpath d='M0 28a14 14 0 0 1 14-14 14 14 0 0 1 14 14'/%3E%3Cpath d='M28 28a14 14 0 0 1 14-14 14 14 0 0 1 14 14'/%3E%3C/g%3E%3C/svg%3E\")",
       },

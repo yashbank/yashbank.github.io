@@ -1,4 +1,6 @@
 import { PROJECTS } from '@/assets/content'
+import { SITE_IMAGES } from '@/assets/siteImages'
+import { SectionBackdrop } from '@/components/SectionBackdrop'
 import { ProjectCard } from '@/components/ProjectCard'
 import { SectionHeading } from '@/components/SectionHeading'
 
@@ -10,23 +12,28 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative scroll-mt-20 overflow-hidden py-28 md:py-36"
+      className="group/section relative scroll-mt-20 overflow-hidden py-32 md:py-40"
     >
+      <SectionBackdrop
+        desktop={SITE_IMAGES.projects.desktop}
+        mobile={SITE_IMAGES.projects.mobile}
+        imageOpacity={0.11}
+      />
       {/* Ambient accents */}
       <div
-        className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-accent/[0.07] blur-[120px]"
+        className="pointer-events-none absolute -left-24 top-20 z-[1] h-72 w-72 rounded-full bg-accent/[0.07] blur-[120px]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute bottom-20 right-0 h-72 w-72 rounded-full bg-gradient-to-tl from-vermillion/[0.07] via-violet-600/[0.05] to-transparent blur-[110px]"
+        className="pointer-events-none absolute bottom-20 right-0 z-[1] h-72 w-72 rounded-full bg-gradient-to-tl from-vermillion/[0.07] via-violet-600/[0.05] to-transparent blur-[110px]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute left-1/2 top-40 h-px w-[min(90%,48rem)] -translate-x-1/2 bg-gradient-to-r from-transparent via-accent/15 to-transparent"
+        className="pointer-events-none absolute left-1/2 top-40 z-[1] h-px w-[min(90%,48rem)] -translate-x-1/2 bg-gradient-to-r from-transparent via-accent/15 to-transparent"
         aria-hidden
       />
 
-      <div className="container-site relative">
+      <div className="container-site relative z-10">
         <SectionHeading
           eyebrow="Work"
           title="Selected projects"

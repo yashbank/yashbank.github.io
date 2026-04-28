@@ -3,6 +3,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
 import { ABOUT } from '@/assets/content'
+import { SITE_IMAGES } from '@/assets/siteImages'
+import { SectionBackdrop } from '@/components/SectionBackdrop'
 import { SectionHeading } from '@/components/SectionHeading'
 import { fadeInUp } from '@/lib/motion'
 
@@ -40,14 +42,19 @@ export function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative scroll-mt-20 px-6 py-24 md:px-10 md:py-28 lg:py-32"
+      className="group/section relative scroll-mt-20 overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:py-40"
     >
+      <SectionBackdrop
+        desktop={SITE_IMAGES.about.desktop}
+        mobile={SITE_IMAGES.about.mobile}
+        imageOpacity={0.14}
+      />
       <div
         ref={glowRef}
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-accent/12 via-violet-500/8 to-vermillion/[0.06] blur-[100px]"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-[1] h-[400px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-accent/12 via-violet-500/8 to-vermillion/[0.06] blur-[100px]"
         aria-hidden
       />
-      <div className="container-site relative">
+      <div className="container-site relative z-10">
         <SectionHeading
           eyebrow="About"
           title="Code with clarity. Design with intent."

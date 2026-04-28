@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { motion } from 'framer-motion'
 import { SITE } from '@/assets/content'
 import { AvailabilityBadge } from '@/components/AvailabilityBadge'
+import { HeroBackdrop } from '@/components/HeroBackdrop'
 import { fadeInUp } from '@/lib/motion'
 
 const TITLE = SITE.title
@@ -76,21 +77,22 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden px-6 pb-20 pt-12 md:px-10 md:pb-28 md:pt-16"
+      className="group/hero relative flex min-h-[100svh] flex-col justify-center overflow-hidden px-6 pb-24 pt-14 md:px-10 md:pb-32 md:pt-20"
     >
+      <HeroBackdrop />
       <div
         ref={blobA}
-        className="pointer-events-none absolute -left-32 top-1/4 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-accent/14 via-violet-500/10 to-transparent blur-[140px]"
+        className="pointer-events-none absolute -left-32 top-1/4 z-[1] h-[420px] w-[420px] rounded-full bg-gradient-to-br from-accent/14 via-violet-500/10 to-transparent blur-[140px]"
         aria-hidden
       />
       <div
         ref={blobB}
-        className="pointer-events-none absolute -right-20 bottom-1/4 h-[400px] w-[400px] rounded-full bg-gradient-to-tl from-vermillion/10 via-fuchsia-500/8 to-indigo-600/10 blur-[130px]"
+        className="pointer-events-none absolute -right-20 bottom-1/4 z-[1] h-[400px] w-[400px] rounded-full bg-gradient-to-tl from-vermillion/10 via-fuchsia-500/8 to-indigo-600/10 blur-[130px]"
         aria-hidden
       />
       <div
         ref={gridRef}
-        className="pointer-events-none absolute inset-0 opacity-[0.22]"
+        className="pointer-events-none absolute inset-0 z-[2] opacity-[0.18]"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
@@ -102,11 +104,11 @@ export function Hero() {
 
       {/* Hanko-inspired frame + vertical copy — decorative */}
       <div
-        className="pointer-events-none absolute left-5 top-28 z-[1] h-8 w-8 rounded border border-vermillion/15 md:left-10 md:top-32"
+        className="pointer-events-none absolute left-5 top-28 z-[3] h-8 w-8 rounded border border-vermillion/15 md:left-10 md:top-32"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute bottom-28 right-5 z-[1] hidden flex-col items-center gap-3 md:flex md:right-10"
+        className="pointer-events-none absolute bottom-28 right-5 z-[3] hidden flex-col items-center gap-3 md:flex md:right-10"
         aria-hidden
       >
         <div className="h-12 w-px bg-gradient-to-b from-transparent via-vermillion/30 to-transparent" />
@@ -115,7 +117,7 @@ export function Hero() {
         </p>
       </div>
 
-      <div className="container-site relative z-10">
+      <div className="container-site relative z-10 max-w-[68rem]">
         <AvailabilityBadge />
 
         <motion.h1
@@ -141,7 +143,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-8 max-w-xl text-lg leading-[1.7] text-gray-500 md:text-xl"
+          className="mt-8 max-w-xl text-lg leading-[1.75] text-gray-400/95 md:text-xl"
         >
           {SITE.tagline}
         </motion.p>

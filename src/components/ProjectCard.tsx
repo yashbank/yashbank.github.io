@@ -59,7 +59,10 @@ export function ProjectCard({ project, index }: Props) {
           <LazyImage
             src={project.image}
             alt={project.imageAlt}
-            className="h-full w-full object-cover object-top transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+            width={1600}
+            height={1000}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="h-full w-full object-cover object-top transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
           />
           <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-surface via-surface/25 to-transparent opacity-[0.94]" />
           <span

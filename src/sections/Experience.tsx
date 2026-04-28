@@ -3,6 +3,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
 import { EXPERIENCE } from '@/assets/content'
+import { SITE_IMAGES } from '@/assets/siteImages'
+import { SectionBackdrop } from '@/components/SectionBackdrop'
 import { SectionHeading } from '@/components/SectionHeading'
 import { fadeInUp } from '@/lib/motion'
 
@@ -37,23 +39,28 @@ export function Experience() {
     <section
       ref={sectionRef}
       id="experience"
-      className="scroll-mt-20 px-6 py-24 md:px-10 md:py-28 lg:py-32"
+      className="group/section relative scroll-mt-20 overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:py-40"
     >
-      <div className="container-site">
+      <SectionBackdrop
+        desktop={SITE_IMAGES.experience.desktop}
+        mobile={SITE_IMAGES.experience.mobile}
+        imageOpacity={0.12}
+      />
+      <div className="container-site relative z-10">
         <SectionHeading
           eyebrow="Experience"
           title="Where I've shipped"
           subtitle="A snapshot of roles focused on ownership, mentorship, and end-to-end delivery."
         />
 
-        <div className="relative mt-16">
+        <div className="relative z-10 mt-16">
           <div
-            className="absolute left-[11px] top-0 hidden h-full w-px bg-white/10 md:block"
+            className="absolute left-[11px] top-0 z-0 hidden h-full w-px bg-white/10 md:block"
             aria-hidden
           />
           <div
             ref={lineRef}
-            className="absolute left-[11px] top-0 hidden h-full w-px origin-top bg-gradient-to-b from-accent to-accent/20 md:block"
+            className="absolute left-[11px] top-0 z-0 hidden h-full w-px origin-top bg-gradient-to-b from-accent to-accent/20 md:block"
             aria-hidden
           />
 
@@ -65,10 +72,10 @@ export function Experience() {
                 whileInView={fadeInUp.animate}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ ...fadeInUp.transition, delay: i * 0.08 }}
-                className="relative"
+                className="relative z-10"
               >
-                <span className="absolute -left-[3px] top-2 hidden h-3 w-3 rounded-full border-2 border-accent bg-surface md:block" />
-                <div className="glass-card rounded-2xl p-6 md:p-8">
+                <span className="absolute -left-[3px] top-2 z-[1] hidden h-3 w-3 rounded-full border-2 border-accent bg-surface md:block" />
+                <div className="glass-card rounded-2xl p-6 transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_48px_-28px_rgba(0,0,0,0.5)] md:p-8">
                   <p className="text-xs font-semibold uppercase tracking-widest text-accent">
                     {job.period}
                   </p>
