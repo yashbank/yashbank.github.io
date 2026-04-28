@@ -14,11 +14,7 @@ export function Projects() {
       id="projects"
       className="group/section relative scroll-mt-20 overflow-hidden py-32 md:py-40"
     >
-      <SectionBackdrop
-        desktop={SITE_IMAGES.projects.desktop}
-        mobile={SITE_IMAGES.projects.mobile}
-        imageOpacity={0.11}
-      />
+      <SectionBackdrop desktop={SITE_IMAGES.projects.desktop} mobile={SITE_IMAGES.projects.mobile} />
       {/* Ambient accents */}
       <div
         className="pointer-events-none absolute -left-24 top-20 z-[1] h-72 w-72 rounded-full bg-accent/[0.07] blur-[120px]"

@@ -129,7 +129,7 @@ export const PROJECTS: ProjectItem[] = [
     title: 'AI Task & Workflow Manager',
     description:
       'Full-stack productivity app: dashboard insights, task CRUD, drag-and-drop Kanban, and optional AI-assisted suggestions. Next.js 14, Prisma, PostgreSQL, NextAuth, OpenAI — production-ready; public demo is UI-forward for portfolio hosting.',
-    image: '/images/section-3-desktop.jpg',
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
     imageAlt: 'Desk with notebook representing task planning',
     tech: ['Next.js 14', 'TypeScript', 'Prisma', 'PostgreSQL', 'Tailwind', 'OpenAI'],
     liveUrl: 'https://ai-task-workflow-manager-gamma.vercel.app/',
@@ -141,7 +141,7 @@ export const PROJECTS: ProjectItem[] = [
     title: 'SaaS Admin Dashboard',
     description:
       'Admin-style dashboard for SaaS metrics, users, and configuration — polished tables, charts, and layout patterns suited to real product work. Deployed on Vercel with a clean, responsive UI.',
-    image: '/images/section-5-desktop.jpg',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
     imageAlt: 'Analytics charts on a laptop screen',
     tech: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel', 'React', 'Charts'],
     liveUrl: 'https://saas-admin-dashboard-sepia.vercel.app/',
@@ -153,7 +153,7 @@ export const PROJECTS: ProjectItem[] = [
     title: 'Wishkart (Meesho-style clone)',
     description:
       'Team project cloning core Meesho flows — lifestyle products, cart, and checkout — strong UI parity, collaboration, and JavaScript fundamentals.',
-    image: '/images/section-4-mobile.jpg',
+    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80',
     imageAlt: 'E-commerce shopping bags and packages',
     tech: ['React', 'JavaScript', 'Node', 'MongoDB', 'Team'],
     liveUrl: 'https://github.com/yashbank/Wishkart--CLONE',
@@ -165,7 +165,7 @@ export const PROJECTS: ProjectItem[] = [
     title: 'Licious-style experience',
     description:
       'Ordering and delivery UX for fresh products — fast flows, clear CTAs, and a smooth customer journey built with the MERN mindset.',
-    image: '/images/section-4-desktop.jpg',
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
     imageAlt: 'Fresh food ingredients on a kitchen board',
     tech: ['JavaScript', 'MERN', 'E-commerce', 'REST'],
     liveUrl: 'https://github.com/yashbank/Licious---CLONE',

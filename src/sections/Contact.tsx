@@ -30,11 +30,7 @@ export function Contact() {
       id="contact"
       className="group/section relative scroll-mt-20 overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:pb-40 lg:pt-36"
     >
-      <SectionBackdrop
-        desktop={SITE_IMAGES.contact.desktop}
-        mobile={SITE_IMAGES.contact.mobile}
-        imageOpacity={0.1}
-      />
+      <SectionBackdrop desktop={SITE_IMAGES.contact.desktop} mobile={SITE_IMAGES.contact.mobile} />
       <div className="container-site relative z-10">
         <SectionHeading
           eyebrow="Contact"

@@ -44,11 +44,7 @@ export function About() {
       id="about"
       className="group/section relative scroll-mt-20 overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:py-40"
     >
-      <SectionBackdrop
-        desktop={SITE_IMAGES.about.desktop}
-        mobile={SITE_IMAGES.about.mobile}
-        imageOpacity={0.14}
-      />
+      <SectionBackdrop desktop={SITE_IMAGES.about.desktop} mobile={SITE_IMAGES.about.mobile} />
       <div
         ref={glowRef}
         className="pointer-events-none absolute left-1/2 top-1/2 z-[1] h-[400px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-accent/12 via-violet-500/8 to-vermillion/[0.06] blur-[100px]"

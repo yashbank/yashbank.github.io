@@ -12,11 +12,7 @@ export function Skills() {
       id="skills"
       className="group/section relative scroll-mt-20 overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:py-44"
     >
-      <SectionBackdrop
-        desktop={SITE_IMAGES.skills.desktop}
-        mobile={SITE_IMAGES.skills.mobile}
-        imageOpacity={0.12}
-      />
+      <SectionBackdrop desktop={SITE_IMAGES.skills.desktop} mobile={SITE_IMAGES.skills.mobile} />
       <div className="container-site relative z-10">
         <SectionHeading
           eyebrow="Skills"

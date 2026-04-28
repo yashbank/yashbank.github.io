@@ -21,7 +21,7 @@ type Props = {
 export function SectionBackdrop({
   desktop,
   mobile,
-  imageOpacity = 0.16,
+  imageOpacity = 0.32,
   loading = 'lazy',
   fetchPriority = 'auto',
   width = 1920,
@@ -51,11 +51,11 @@ export function SectionBackdrop({
           className="absolute inset-0 h-full min-h-full w-full object-cover object-center transition-[transform,opacity] duration-[1.35s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/section:scale-[1.035]"
         />
       </picture>
-      {/* Strong scrim so type stays readable on bright or busy photos */}
-      <div className="absolute inset-0 bg-surface/55" />
-      <div className="absolute inset-0 bg-gradient-to-b from-surface/95 via-surface/80 to-surface/93" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-accent/[0.05] via-transparent to-vermillion/[0.04]" />
-      <div className="absolute inset-0 backdrop-blur-[3px]" />
+      {/* Lighter scrim: photos read clearly while copy stays legible */}
+      <div className="absolute inset-0 bg-surface/38" />
+      <div className="absolute inset-0 bg-gradient-to-b from-surface/78 via-surface/55 to-surface/80" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-accent/[0.04] via-transparent to-vermillion/[0.03]" />
+      <div className="absolute inset-0 backdrop-blur-[1px]" />
     </div>
   )
 }

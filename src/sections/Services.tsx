@@ -11,11 +11,7 @@ export function Services() {
       id="services"
       className="group/section relative scroll-mt-20 overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:py-40"
     >
-      <SectionBackdrop
-        desktop={SITE_IMAGES.services.desktop}
-        mobile={SITE_IMAGES.services.mobile}
-        imageOpacity={0.1}
-      />
+      <SectionBackdrop desktop={SITE_IMAGES.services.desktop} mobile={SITE_IMAGES.services.mobile} />
       <div className="container-site relative z-10">
         <SectionHeading
           eyebrow="Services"
