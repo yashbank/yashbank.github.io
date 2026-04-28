@@ -44,43 +44,49 @@ export function ProjectCard({ project, index }: Props) {
         ref={cardRef}
         onMouseMove={handleMove}
         onMouseLeave={handleLeave}
-        className={`glass-card relative flex h-full w-full flex-col overflow-hidden rounded-[1.25rem] will-change-transform ${
-          isProduction ? 'ring-1 ring-accent/15 shadow-glow' : ''
+        className={`glass-card relative flex h-full w-full flex-col overflow-hidden rounded-2xl will-change-transform sm:rounded-[1.35rem] ${
+          isProduction
+            ? 'ring-1 ring-white/[0.08] shadow-glow shadow-[0_0_0_1px_rgba(61,212,200,0.06)_inset]'
+            : 'ring-1 ring-white/[0.04]'
         }`}
         style={{ transformStyle: 'preserve-3d' }}
       >
         <div className="relative shrink-0 aspect-[16/10] overflow-hidden bg-surface-elevated">
+          <div
+            className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-br from-accent/[0.06] via-transparent to-indigo-500/[0.07] mix-blend-screen"
+            aria-hidden
+          />
           <LazyImage
             src={project.image}
-            alt=""
-            className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+            alt={project.imageAlt}
+            className="h-full w-full object-cover object-top transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent opacity-95" />
+          <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-surface via-surface/25 to-transparent opacity-[0.94]" />
           <span
-            className={`absolute left-3 top-3 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider backdrop-blur-md ${
+            className={`absolute left-3 top-3 z-[3] rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] backdrop-blur-md ${
               isProduction
-                ? 'border border-accent/35 bg-surface/85 text-accent'
-                : 'border border-white/10 bg-surface/80 text-gray-400'
+                ? 'border border-accent/40 bg-surface/90 text-accent shadow-[0_0_20px_rgba(61,212,200,0.12)]'
+                : 'border border-white/12 bg-surface/85 text-gray-300'
             }`}
           >
-            {isProduction ? 'Live · Vercel' : 'Team build'}
+            {isProduction ? 'Live · Vercel' : 'Shipped / team'}
           </span>
         </div>
 
-        <div className="flex min-h-[280px] flex-1 flex-col p-6">
-          <h3 className="shrink-0 font-display text-lg font-semibold leading-snug text-white sm:text-xl">
+        <div className="flex min-h-[260px] flex-1 flex-col p-6 sm:p-7">
+          <h3 className="shrink-0 font-display text-lg font-semibold leading-snug tracking-[-0.02em] text-white sm:text-xl">
             {project.title}
           </h3>
-          <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-gray-400">
+          <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-gray-400/95">
             {project.description}
           </p>
 
-          <div className="mt-auto flex flex-col gap-4 border-t border-white/5 pt-5">
+          <div className="mt-auto flex flex-col gap-4 border-t border-white/[0.06] pt-5">
             <ul className="flex flex-wrap gap-2">
               {project.tech.map((t) => (
                 <li
                   key={t}
-                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300"
+                  className="rounded-full border border-white/[0.08] bg-white/[0.04] px-3 py-1 text-[11px] font-medium tracking-wide text-gray-300/95"
                 >
                   {t}
                 </li>
@@ -92,7 +98,7 @@ export function ProjectCard({ project, index }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor-hover
-                className="inline-flex min-h-[42px] flex-1 items-center justify-center rounded-xl bg-gradient-to-r from-accent to-teal-400 px-4 py-2.5 text-sm font-semibold text-surface shadow-glow transition duration-300 hover:scale-[1.02] hover:shadow-glow-lg"
+                className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl bg-gradient-to-r from-accent via-teal-300 to-cyan-400 px-4 py-2.5 text-sm font-semibold text-surface shadow-glow-sm transition duration-300 hover:scale-[1.02] hover:shadow-glow-lg hover:brightness-[1.03]"
               >
                 Live
               </a>
@@ -101,7 +107,7 @@ export function ProjectCard({ project, index }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor-hover
-                className="inline-flex min-h-[42px] flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition duration-300 hover:scale-[1.02] hover:border-accent/40 hover:text-accent"
+                className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl border border-white/[0.1] bg-white/[0.04] px-4 py-2.5 text-sm font-medium text-white/95 backdrop-blur-md transition duration-300 hover:scale-[1.02] hover:border-accent/35 hover:bg-white/[0.07] hover:text-accent"
               >
                 GitHub
               </a>

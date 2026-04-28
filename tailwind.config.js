@@ -30,7 +30,7 @@ export default {
       },
       backgroundImage: {
         'mesh-gradient':
-          'radial-gradient(ellipse 100% 85% at 50% -35%, rgba(61, 212, 200, 0.09), transparent 58%), radial-gradient(ellipse 70% 55% at 100% 35%, rgba(99, 102, 241, 0.05), transparent 50%), radial-gradient(ellipse 55% 45% at 0% 85%, rgba(61, 212, 200, 0.04), transparent 45%)',
+          'radial-gradient(ellipse 110% 90% at 50% -40%, rgba(61, 212, 200, 0.11), transparent 55%), radial-gradient(ellipse 75% 60% at 100% 28%, rgba(129, 140, 248, 0.08), transparent 52%), radial-gradient(ellipse 60% 50% at 0% 88%, rgba(45, 212, 191, 0.05), transparent 48%), radial-gradient(ellipse 45% 40% at 85% 92%, rgba(99, 102, 241, 0.04), transparent 50%)',
       },
     },
   },

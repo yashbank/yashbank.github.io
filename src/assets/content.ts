@@ -89,6 +89,8 @@ export type ProjectItem = {
   title: string
   description: string
   image: string
+  /** Short alt for preview image (accessibility) */
+  imageAlt: string
   tech: string[]
   liveUrl: string
   repoUrl: string
@@ -96,18 +98,43 @@ export type ProjectItem = {
   tier: ProjectTier
 }
 
-/** Four projects: two shipped products + two best earlier builds */
+/** Featured Vercel products + additional shipped tools and team builds */
 export const PROJECTS: ProjectItem[] = [
+  {
+    id: 'star-health-insurance-crm',
+    title: 'Star Health Insurance CRM',
+    description:
+      'Full-stack CRM for insurance operations: lead pipeline, customer profiles, policies, renewals, claims, and role-based dashboards. React + Vite UI, Express API with JWT, PostgreSQL or embedded PGlite for frictionless local demos — tuned for desk and field teams.',
+    image: '/projects/star-health-insurance-crm.png',
+    imageAlt: 'Star Health Insurance CRM sign-in screen with dark theme',
+    tech: ['React 18', 'Vite', 'Tailwind', 'Express', 'PostgreSQL', 'JWT', 'Recharts'],
+    liveUrl: 'https://frontend-red-omega-34.vercel.app/',
+    repoUrl: 'https://github.com/yashbank/Star_Health_Insurance_CRM',
+    tier: 'production',
+  },
+  {
+    id: 'hiredlens',
+    title: 'HiredLens',
+    description:
+      'AI career workspace: ATS-style resume scoring, keyword gaps, rewrite suggestions, skill roadmap, Q&A prep, and mock interview flows — a cohesive Next.js experience with a production-minded UI and clear analysis narrative.',
+    image: '/projects/hiredlens-career-workspace.png',
+    imageAlt: 'HiredLens dashboard overview with sidebar navigation',
+    tech: ['Next.js', 'TypeScript', 'Tailwind', 'shadcn/ui', 'Vercel'],
+    liveUrl: 'https://hiredlens.vercel.app/',
+    repoUrl: 'https://github.com/yashbank/HiredLens',
+    tier: 'production',
+  },
   {
     id: 'ai-task-workflow',
     title: 'AI Task & Workflow Manager',
     description:
       'Full-stack productivity app: dashboard insights, task CRUD, drag-and-drop Kanban, and optional AI-assisted suggestions. Next.js 14, Prisma, PostgreSQL, NextAuth, OpenAI — production-ready; public demo is UI-forward for portfolio hosting.',
     image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
+    imageAlt: 'Desk with notebook representing task planning',
     tech: ['Next.js 14', 'TypeScript', 'Prisma', 'PostgreSQL', 'Tailwind', 'OpenAI'],
     liveUrl: 'https://ai-task-workflow-manager-gamma.vercel.app/',
     repoUrl: 'https://github.com/yashbank/ai-task-workflow-manager',
-    tier: 'production',
+    tier: 'build',
   },
   {
     id: 'saas-admin-dashboard',
@@ -115,10 +142,11 @@ export const PROJECTS: ProjectItem[] = [
     description:
       'Admin-style dashboard for SaaS metrics, users, and configuration — polished tables, charts, and layout patterns suited to real product work. Deployed on Vercel with a clean, responsive UI.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    imageAlt: 'Analytics charts on a laptop screen',
     tech: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel', 'React', 'Charts'],
     liveUrl: 'https://saas-admin-dashboard-sepia.vercel.app/',
     repoUrl: 'https://github.com/yashbank/saas-admin-dashboard',
-    tier: 'production',
+    tier: 'build',
   },
   {
     id: 'wishkart',
@@ -126,6 +154,7 @@ export const PROJECTS: ProjectItem[] = [
     description:
       'Team project cloning core Meesho flows — lifestyle products, cart, and checkout — strong UI parity, collaboration, and JavaScript fundamentals.',
     image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80',
+    imageAlt: 'E-commerce shopping bags and packages',
     tech: ['React', 'JavaScript', 'Node', 'MongoDB', 'Team'],
     liveUrl: 'https://github.com/yashbank/Wishkart--CLONE',
     repoUrl: 'https://github.com/yashbank/Wishkart--CLONE',
@@ -137,6 +166,7 @@ export const PROJECTS: ProjectItem[] = [
     description:
       'Ordering and delivery UX for fresh products — fast flows, clear CTAs, and a smooth customer journey built with the MERN mindset.',
     image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+    imageAlt: 'Fresh food ingredients on a kitchen board',
     tech: ['JavaScript', 'MERN', 'E-commerce', 'REST'],
     liveUrl: 'https://github.com/yashbank/Licious---CLONE',
     repoUrl: 'https://github.com/yashbank/Licious---CLONE',

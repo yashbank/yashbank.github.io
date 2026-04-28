@@ -47,8 +47,9 @@
   }
 
   .glass-card {
-    @apply rounded-2xl border border-white/[0.06] bg-white/[0.03] shadow-soft backdrop-blur-2xl transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
-    @apply hover:border-accent/20 hover:bg-white/[0.05] hover:shadow-glow;
+    @apply rounded-2xl border border-white/[0.06] bg-white/[0.035] shadow-soft backdrop-blur-2xl transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+    @apply hover:border-accent/25 hover:bg-white/[0.055] hover:shadow-glow;
+    @apply supports-[backdrop-filter]:bg-white/[0.028];
   }
 
   .container-site {

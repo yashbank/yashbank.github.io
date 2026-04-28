@@ -30,7 +30,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Work"
           title="Selected projects"
-          subtitle="Two production apps on Vercel, plus standout team builds — full stack, shippable UI, and real collaboration."
+          subtitle="Insurance CRM and AI career tooling live on Vercel — plus dashboards, workflow tools, and standout team builds. Full stack, polished UI, and shippable quality."
         />
 
         {/* Shipped row — slightly larger visual weight */}
