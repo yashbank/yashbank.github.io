@@ -46,7 +46,7 @@ export function ProjectCard({ project, index }: Props) {
         onMouseLeave={handleLeave}
         className={`glass-card relative flex h-full w-full flex-col overflow-hidden rounded-2xl will-change-transform sm:rounded-[1.35rem] ${
           isProduction
-            ? 'ring-1 ring-white/[0.08] shadow-glow shadow-[0_0_0_1px_rgba(61,212,200,0.06)_inset]'
+            ? 'ring-1 ring-white/[0.08] shadow-glow shadow-[0_0_0_1px_rgba(159,143,255,0.08)_inset]'
             : 'ring-1 ring-white/[0.04]'
         }`}
         style={{ transformStyle: 'preserve-3d' }}
@@ -65,7 +65,7 @@ export function ProjectCard({ project, index }: Props) {
           <span
             className={`absolute left-3 top-3 z-[3] rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] backdrop-blur-md ${
               isProduction
-                ? 'border border-accent/40 bg-surface/90 text-accent shadow-[0_0_20px_rgba(61,212,200,0.12)]'
+                ? 'border border-accent/40 bg-surface/90 text-accent shadow-[0_0_22px_rgba(159,143,255,0.14)]'
                 : 'border border-white/12 bg-surface/85 text-gray-300'
             }`}
           >
@@ -98,7 +98,7 @@ export function ProjectCard({ project, index }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor-hover
-                className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl bg-gradient-to-r from-accent via-teal-300 to-cyan-400 px-4 py-2.5 text-sm font-semibold text-surface shadow-glow-sm transition duration-300 hover:scale-[1.02] hover:shadow-glow-lg hover:brightness-[1.03]"
+                className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl bg-gradient-to-r from-accent via-violet-400 to-sky-400 px-4 py-2.5 text-sm font-semibold text-surface shadow-glow-sm transition duration-300 hover:scale-[1.02] hover:shadow-glow-lg hover:brightness-[1.04]"
               >
                 Live
               </a>

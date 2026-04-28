@@ -80,12 +80,12 @@ export function Hero() {
     >
       <div
         ref={blobA}
-        className="pointer-events-none absolute -left-32 top-1/4 h-[420px] w-[420px] rounded-full bg-accent/12 blur-[140px]"
+        className="pointer-events-none absolute -left-32 top-1/4 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-accent/14 via-violet-500/10 to-transparent blur-[140px]"
         aria-hidden
       />
       <div
         ref={blobB}
-        className="pointer-events-none absolute -right-20 bottom-1/4 h-[380px] w-[380px] rounded-full bg-indigo-500/12 blur-[130px]"
+        className="pointer-events-none absolute -right-20 bottom-1/4 h-[400px] w-[400px] rounded-full bg-gradient-to-tl from-vermillion/10 via-fuchsia-500/8 to-indigo-600/10 blur-[130px]"
         aria-hidden
       />
       <div
@@ -99,6 +99,21 @@ export function Hero() {
         }}
         aria-hidden
       />
+
+      {/* Hanko-inspired frame + vertical copy — decorative */}
+      <div
+        className="pointer-events-none absolute left-5 top-28 z-[1] h-8 w-8 rounded border border-vermillion/15 md:left-10 md:top-32"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute bottom-28 right-5 z-[1] hidden flex-col items-center gap-3 md:flex md:right-10"
+        aria-hidden
+      >
+        <div className="h-12 w-px bg-gradient-to-b from-transparent via-vermillion/30 to-transparent" />
+        <p className="font-jp text-[10px] font-medium leading-[1.9] tracking-[0.5em] text-white/[0.09] [writing-mode:vertical-rl]">
+          作品集
+        </p>
+      </div>
 
       <div className="container-site relative z-10">
         <AvailabilityBadge />

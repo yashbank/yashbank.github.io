@@ -9,7 +9,7 @@ export function ScrollProgress() {
       aria-hidden
     >
       <div
-        className="h-full w-full origin-left bg-gradient-to-r from-accent/90 via-teal-300/80 to-cyan-400/70 opacity-90 will-change-transform"
+        className="h-full w-full origin-left bg-gradient-to-r from-accent/95 via-violet-300/85 to-sky-400/75 opacity-90 will-change-transform"
         style={{ transform: `scaleX(${progress})` }}
       />
     </div>

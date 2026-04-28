@@ -27,7 +27,7 @@ export function Navbar({ activeId }: Props) {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/[0.05] bg-surface/50 backdrop-blur-3xl supports-[backdrop-filter]:bg-surface/40">
+    <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-surface/55 shadow-[inset_0_-1px_0_rgba(159,143,255,0.06)] backdrop-blur-3xl supports-[backdrop-filter]:bg-surface/38">
       <nav
         className="container-site flex max-w-6xl items-center justify-between gap-4 py-4"
         aria-label="Primary"

@@ -18,7 +18,7 @@ export function Projects() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute bottom-20 right-0 h-64 w-64 rounded-full bg-indigo-500/[0.06] blur-[100px]"
+        className="pointer-events-none absolute bottom-20 right-0 h-72 w-72 rounded-full bg-gradient-to-tl from-vermillion/[0.07] via-violet-600/[0.05] to-transparent blur-[110px]"
         aria-hidden
       />
       <div

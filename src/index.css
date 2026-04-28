@@ -13,6 +13,19 @@
     background-attachment: fixed;
   }
 
+  /* Seigaiha-inspired wave grid — very light, reads as texture */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.72;
+    @apply bg-jp-seigaiha;
+    background-size: 56px 28px;
+    mask-image: radial-gradient(ellipse 78% 68% at 50% 42%, black 18%, transparent 68%);
+  }
+
   /* Subtle film grain — soft depth without noise assets */
   body::before {
     content: '';
@@ -20,7 +33,7 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.035;
+    opacity: 0.04;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
@@ -30,7 +43,7 @@
   }
 
   ::selection {
-    @apply bg-accent/20 text-white;
+    @apply bg-accent/25 text-white;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -61,21 +74,21 @@
   }
 
   .text-gradient-accent {
-    @apply bg-gradient-to-r from-accent via-accent-soft to-teal-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent via-fuchsia-200/90 to-sky-300 bg-clip-text text-transparent;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-accent to-teal-400/90 px-8 py-4 font-semibold text-surface shadow-glow-sm;
-    @apply transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] hover:shadow-glow-lg;
+    @apply inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-accent via-violet-400 to-sky-400 px-8 py-4 font-semibold text-surface shadow-glow-sm;
+    @apply transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] hover:shadow-glow-lg hover:brightness-[1.04];
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.04] px-8 py-4 font-semibold text-white/95 backdrop-blur-md;
-    @apply transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] hover:border-accent/25 hover:bg-white/[0.07];
+    @apply inline-flex items-center justify-center rounded-2xl border border-white/[0.09] bg-white/[0.035] px-8 py-4 font-semibold text-white/95 backdrop-blur-md;
+    @apply transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.015] hover:border-accent/30 hover:bg-white/[0.06];
   }
 
   .btn-nav-primary {
-    @apply rounded-xl bg-gradient-to-r from-accent to-teal-400/90 px-4 py-2 text-sm font-semibold text-surface shadow-glow-sm transition duration-500 hover:scale-[1.02] hover:shadow-glow-lg;
+    @apply rounded-xl bg-gradient-to-r from-accent via-violet-400 to-sky-400 px-4 py-2 text-sm font-semibold text-surface shadow-glow-sm transition duration-500 hover:scale-[1.02] hover:shadow-glow-lg hover:brightness-[1.04];
   }
 
   .nav-link-active {

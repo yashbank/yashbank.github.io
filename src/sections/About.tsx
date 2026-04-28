@@ -44,7 +44,7 @@ export function About() {
     >
       <div
         ref={glowRef}
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-[100px]"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-accent/12 via-violet-500/8 to-vermillion/[0.06] blur-[100px]"
         aria-hidden
       />
       <div className="container-site relative">
