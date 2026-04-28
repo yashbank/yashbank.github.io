@@ -56,7 +56,7 @@ export function Projects() {
 
         {/* Builds row */}
         <div className="mt-20 space-y-4 border-t border-white/[0.05] pt-20">
-          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-500/90">
+          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400">
             Team builds
           </p>
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 lg:items-stretch">

@@ -21,9 +21,10 @@ export function HeroBackdrop() {
           className="absolute inset-0 h-full min-h-[100svh] w-full object-cover object-[center_22%] opacity-[0.22] transition-[transform,opacity] duration-[1.6s] ease-[cubic-bezier(0.22,1,0.36,1)] md:object-center md:opacity-[0.18] group-hover/hero:scale-[1.028]"
         />
       </picture>
-      <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface/85 to-surface" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-accent/[0.07] via-transparent to-vermillion/[0.05]" />
-      <div className="absolute inset-0 backdrop-blur-[1px] md:backdrop-blur-0" />
+      <div className="absolute inset-0 bg-surface/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface/88 to-surface" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-accent/[0.06] via-transparent to-vermillion/[0.04]" />
+      <div className="absolute inset-0 backdrop-blur-[2px] md:backdrop-blur-[1px]" />
     </div>
   )
 }

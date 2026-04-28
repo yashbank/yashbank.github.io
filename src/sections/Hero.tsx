@@ -143,7 +143,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-8 max-w-xl text-lg leading-[1.75] text-gray-400/95 md:text-xl"
+          className="mt-8 max-w-xl text-lg leading-[1.75] text-gray-300 md:text-xl"
         >
           {SITE.tagline}
         </motion.p>
@@ -166,7 +166,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.6 }}
-          className="mt-16 flex items-center gap-3 text-sm text-gray-500"
+          className="mt-16 flex items-center gap-3 text-sm text-gray-400"
         >
           <span className="h-px w-12 bg-gradient-to-r from-transparent to-accent/60" />
           Scroll to explore

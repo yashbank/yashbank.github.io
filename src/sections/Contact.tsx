@@ -55,7 +55,7 @@ export function Contact() {
               className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-500 hover:scale-[1.01] hover:border-accent/35 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.4)]"
             >
               <span>
-                <span className="block text-xs uppercase tracking-widest text-gray-500">Email</span>
+                <span className="block text-xs uppercase tracking-widest text-gray-400">Email</span>
                 <span className="mt-1 block text-lg text-white">{SITE.email}</span>
               </span>
               <span className="text-accent" aria-hidden>
@@ -67,7 +67,7 @@ export function Contact() {
               className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-500 hover:scale-[1.01] hover:border-accent/35 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.4)]"
             >
               <span>
-                <span className="block text-xs uppercase tracking-widest text-gray-500">Phone</span>
+                <span className="block text-xs uppercase tracking-widest text-gray-400">Phone</span>
                 <span className="mt-1 block text-lg text-white">{SITE.phone}</span>
               </span>
               <span className="text-accent" aria-hidden>
@@ -81,16 +81,14 @@ export function Contact() {
               className="glass flex items-center justify-between rounded-2xl px-6 py-5 transition duration-500 hover:scale-[1.01] hover:border-[#25D366]/40 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.4)]"
             >
               <span>
-                <span className="block text-xs uppercase tracking-widest text-gray-500">
-                  WhatsApp
-                </span>
+                <span className="block text-xs uppercase tracking-widest text-gray-400">WhatsApp</span>
                 <span className="mt-1 block text-lg text-white">{SITE.whatsapp}</span>
               </span>
               <span className="text-[#25D366]" aria-hidden>
                 →
               </span>
             </a>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-400">
               Based in {SITE.location}. Open to remote work across India, GCC, the US, and compatible time zones.
             </p>
           </motion.div>
@@ -105,7 +103,7 @@ export function Contact() {
           >
             <div className="space-y-5">
               <div>
-                <label htmlFor="name" className="text-xs font-medium uppercase tracking-widest text-gray-500">
+                <label htmlFor="name" className="text-xs font-medium uppercase tracking-widest text-gray-400">
                   Name
                 </label>
                 <input
@@ -118,7 +116,7 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="text-xs font-medium uppercase tracking-widest text-gray-500">
+                <label htmlFor="email" className="text-xs font-medium uppercase tracking-widest text-gray-400">
                   Email
                 </label>
                 <input
@@ -132,7 +130,7 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="text-xs font-medium uppercase tracking-widest text-gray-500">
+                <label htmlFor="message" className="text-xs font-medium uppercase tracking-widest text-gray-400">
                   Message
                 </label>
                 <textarea

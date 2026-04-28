@@ -82,8 +82,8 @@ export function Experience() {
                   <h3 className="font-display mt-2 text-xl font-semibold text-white md:text-2xl">
                     {job.role}
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{job.company}</p>
-                  <p className="mt-4 leading-relaxed text-gray-400">{job.summary}</p>
+                  <p className="mt-1 text-sm text-gray-400">{job.company}</p>
+                  <p className="mt-4 leading-relaxed text-gray-300">{job.summary}</p>
                 </div>
               </motion.li>
             ))}

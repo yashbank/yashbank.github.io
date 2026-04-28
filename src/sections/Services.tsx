@@ -38,7 +38,7 @@ export function Services() {
                 {String(i + 1).padStart(2, '0')}
               </div>
               <h3 className="font-display text-xl font-semibold text-white">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-400 transition duration-300 group-hover:text-gray-300">
+              <p className="mt-3 text-sm leading-relaxed text-gray-300 transition duration-300 group-hover:text-gray-100">
                 {s.description}
               </p>
             </motion.article>

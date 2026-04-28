@@ -80,7 +80,7 @@ export function ProjectCard({ project, index }: Props) {
           <h3 className="shrink-0 font-display text-lg font-semibold leading-snug tracking-[-0.02em] text-white sm:text-xl">
             {project.title}
           </h3>
-          <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-gray-400/95">
+          <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-gray-300">
             {project.description}
           </p>
 

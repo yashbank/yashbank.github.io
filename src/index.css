@@ -61,7 +61,7 @@
 
   .glass-card {
     @apply rounded-2xl border border-white/[0.07] bg-white/[0.042] shadow-soft backdrop-blur-2xl transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
-    @apply hover:border-accent/22 hover:bg-white/[0.06] hover:shadow-[0_28px_64px_-32px_rgba(0,0,0,0.55)];
+    @apply hover:border-accent/25 hover:bg-white/[0.06] hover:shadow-[0_28px_64px_-32px_rgba(0,0,0,0.55)];
     @apply supports-[backdrop-filter]:bg-white/[0.032];
   }
 

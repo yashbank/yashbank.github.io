@@ -38,7 +38,7 @@ export function SectionHeading({ eyebrow, title, subtitle }: Props) {
           whileInView={fadeInUp.animate}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ ...t, delay: 0.1 }}
-          className="mt-6 max-w-2xl text-lg leading-[1.72] text-gray-400/95 md:text-xl"
+          className="mt-6 max-w-2xl text-lg leading-[1.72] text-gray-300 md:text-xl"
         >
           {subtitle}
         </motion.p>

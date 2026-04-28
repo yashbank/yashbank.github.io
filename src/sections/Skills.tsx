@@ -48,7 +48,7 @@ export function Skills() {
                       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.06] bg-white/[0.03] text-gray-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition duration-300 group-hover/row:border-accent/20 group-hover/row:bg-accent/[0.06] group-hover/row:text-accent/90">
                         <TechIcon name={skill.icon} className="h-[1.125rem] w-[1.125rem]" />
                       </div>
-                      <span className="text-[13px] font-medium leading-snug text-gray-400 transition group-hover/row:text-gray-200">
+                      <span className="text-[13px] font-medium leading-snug text-gray-300 transition group-hover/row:text-white">
                         {skill.label}
                       </span>
                     </div>

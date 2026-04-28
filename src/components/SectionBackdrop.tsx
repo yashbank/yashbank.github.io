@@ -51,9 +51,11 @@ export function SectionBackdrop({
           className="absolute inset-0 h-full min-h-full w-full object-cover object-center transition-[transform,opacity] duration-[1.35s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/section:scale-[1.035]"
         />
       </picture>
-      <div className="absolute inset-0 bg-gradient-to-b from-surface/88 via-surface/72 to-surface/90" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-accent/[0.04] via-transparent to-vermillion/[0.03]" />
-      <div className="absolute inset-0 backdrop-blur-[2px]" />
+      {/* Strong scrim so type stays readable on bright or busy photos */}
+      <div className="absolute inset-0 bg-surface/55" />
+      <div className="absolute inset-0 bg-gradient-to-b from-surface/95 via-surface/80 to-surface/93" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-accent/[0.05] via-transparent to-vermillion/[0.04]" />
+      <div className="absolute inset-0 backdrop-blur-[3px]" />
     </div>
   )
 }

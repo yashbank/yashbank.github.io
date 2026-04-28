@@ -34,7 +34,7 @@ export function WhyHire() {
               className="glass-card rounded-2xl border border-white/[0.07] p-8 transition duration-500 hover:-translate-y-0.5 hover:border-white/[0.1] hover:shadow-[0_20px_44px_-24px_rgba(0,0,0,0.45)]"
             >
               <h3 className="font-display text-lg font-semibold text-white">{point.title}</h3>
-              <p className="mt-3 leading-relaxed text-gray-400">{point.body}</p>
+              <p className="mt-3 leading-relaxed text-gray-300">{point.body}</p>
             </motion.div>
           ))}
         </div>

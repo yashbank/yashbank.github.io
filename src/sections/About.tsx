@@ -68,7 +68,7 @@ export function About() {
               whileInView={fadeInUp.animate}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ ...fadeInUp.transition, delay: i * 0.12 }}
-              className="text-lg leading-relaxed text-gray-400"
+              className="text-lg leading-relaxed text-gray-300"
             >
               {p}
             </motion.p>
