@@ -2,17 +2,17 @@
 
 export const SITE = {
   name: 'Yash Bankar',
-  title: 'Full Stack Developer',
+  title: 'Full-stack product engineer',
   tagline:
-    'MERN-focused engineer with product experience at Accenture and Iauro — shipping for telecom, finance, and clients across Asia, the UAE, and the US.',
+    'Premium websites, SaaS MVPs, internal tools, and practical AI workflows — for teams that care about craft, clarity, and shipping.',
   email: 'yashbank2002@gmail.com',
   phone: '+91 93566 2313',
   phoneTel: '+91935662313',
   whatsapp: '+91 93566 2313',
   whatsappLink: 'https://wa.me/91935662313',
   location: 'Maharashtra, India',
-  birthYear: 2002,
-  resumePath: '/Yash_Bankar_Resume.pdf',
+  /** When set, Navbar shows Resume (file must exist under `public/`). Omit until the PDF is added. */
+  resumePath: null as string | null,
   portfolioUrl: 'https://yashbank.github.io/',
   social: {
     github: 'https://github.com/yashbank',
@@ -20,224 +20,110 @@ export const SITE = {
   },
 } as const
 
+export const HERO = {
+  headline: 'Full-stack product work you can stand behind with customers.',
+  subhead:
+    'Websites, SaaS MVPs, internal tools, and measured AI — clear UI, solid engineering, and delivery that holds up in review.',
+  trustLine:
+    'Full-stack at Iauro (finance); earlier Accenture on a UK telecom programme. 30+ freelance engagements across India, the GCC, and the US — remote-first.',
+  availabilityPill: 'Taking select freelance work',
+} as const
+
+/** Hero right panel — capability card copy (not a dashboard). */
+export const HERO_FOCAL = {
+  label: 'Engagement model',
+  title: 'Design through build — one owner end to end.',
+  micro:
+    'One thread from UI to APIs to deploy so the shipped product matches the pitch and the real user path.',
+  proof: 'Finance · UK telecom programme · Cross-region freelance',
+  chips: ['Websites', 'SaaS MVPs', 'Internal tools', 'AI workflows'] as const,
+} as const
+
+/** Short positioning used in proof section intro */
+export const PROOF_INTRO =
+  'Full-stack engineer with product judgement: tight scoping, steady delivery, UI that respects the brand. Today: Yes Bank Securities at Iauro. Earlier: packaged delivery for Virgin Media O2 with Accenture.'
+
 /** Footer & nav — only list links you use */
 export const SOCIAL_LINKS = [
   { label: 'GitHub', href: SITE.social.github },
   { label: 'LinkedIn', href: SITE.social.linkedin },
 ] as const
 
-export const ABOUT = {
-  paragraphs: [
-    'I’m Yash Bankar — born in 2002, with a strong academic record since school. I completed 12th from Deogiri College, Aurangabad, and graduated with a BSc in Information Technology in 2023 (distinction, zero backlogs). I then earned my Full Stack Web Developer certification from Masai School, Bangalore: an intensive programme (11-hour days, six days a week) covering the MERN stack in depth, plus behavioural and communication skills.',
-    'I’ve built multiple solo and team projects, thrive in high-pressure and remote settings, and enjoy collaborating as much as owning problems end-to-end. I’m dedicated, a practical problem-solver, and I care about clear communication and solid fundamentals. Alongside full-time roles, I’ve freelanced across stacks — delivering 30+ successful projects for clients in Asia, the UAE, and the US.',
-  ],
-}
-
-export type SkillItem = {
-  /** Key for `TechIcon` — see `src/components/TechIcon.tsx` */
-  icon: string
-  label: string
-}
-
-export const SKILL_CATEGORIES: readonly { title: string; skills: readonly SkillItem[] }[] = [
-  {
-    title: 'MERN & web',
-    skills: [
-      { icon: 'mongodb', label: 'MongoDB' },
-      { icon: 'express', label: 'Express' },
-      { icon: 'react', label: 'React' },
-      { icon: 'nodedotjs', label: 'Node.js' },
-      { icon: 'javascript', label: 'JavaScript' },
-      { icon: 'html5', label: 'HTML5' },
-      { icon: 'css3', label: 'CSS3' },
-      { icon: 'openapi', label: 'REST APIs' },
-      { icon: 'postgresql', label: 'SQL' },
-      { icon: 'git', label: 'Git' },
-      { icon: 'github', label: 'GitHub' },
-    ],
-  },
-  {
-    title: 'Languages & more',
-    skills: [
-      { icon: 'python', label: 'Python' },
-      { icon: 'java', label: 'Java' },
-      { icon: 'typescript', label: 'TypeScript' },
-      { icon: 'githubactions', label: 'Automation & CI' },
-      { icon: 'openai', label: 'ChatGPT & AI APIs' },
-      { icon: 'anthropic', label: 'Claude' },
-      { icon: 'vscodium', label: 'Cursor / VS Code' },
-    ],
-  },
-  {
-    title: 'Cloud · DevOps · tools',
-    skills: [
-      { icon: 'aws', label: 'AWS' },
-      { icon: 'gcp', label: 'GCP' },
-      { icon: 'netlify', label: 'Netlify' },
-      { icon: 'vercel', label: 'Vercel' },
-      { icon: 'postman', label: 'Postman' },
-      { icon: 'docker', label: 'Docker' },
-      { icon: 'slack', label: 'Team collaboration' },
-    ],
-  },
-] as const
-
-export type ProjectTier = 'production' | 'build'
-
-export type ProjectItem = {
-  id: string
-  title: string
-  description: string
-  image: string
-  /** Short alt for preview image (accessibility) */
-  imageAlt: string
-  tech: string[]
-  liveUrl: string
-  repoUrl: string
-  /** production = live Vercel products; build = strong clone / team work */
-  tier: ProjectTier
-}
-
-/** Featured Vercel products + additional shipped tools and team builds */
-export const PROJECTS: ProjectItem[] = [
-  {
-    id: 'star-health-insurance-crm',
-    title: 'Star Health Insurance CRM',
-    description:
-      'Full-stack CRM for insurance operations: lead pipeline, customer profiles, policies, renewals, claims, and role-based dashboards. React + Vite UI, Express API with JWT, PostgreSQL or embedded PGlite for frictionless local demos — tuned for desk and field teams.',
-    image: '/projects/star-health-insurance-crm.png',
-    imageAlt: 'Star Health Insurance CRM sign-in screen with dark theme',
-    tech: ['React 18', 'Vite', 'Tailwind', 'Express', 'PostgreSQL', 'JWT', 'Recharts'],
-    liveUrl: 'https://frontend-red-omega-34.vercel.app/',
-    repoUrl: 'https://github.com/yashbank/Star_Health_Insurance_CRM',
-    tier: 'production',
-  },
-  {
-    id: 'hiredlens',
-    title: 'HiredLens',
-    description:
-      'AI career workspace: ATS-style resume scoring, keyword gaps, rewrite suggestions, skill roadmap, Q&A prep, and mock interview flows — a cohesive Next.js experience with a production-minded UI and clear analysis narrative.',
-    image: '/projects/hiredlens-career-workspace.png',
-    imageAlt: 'HiredLens dashboard overview with sidebar navigation',
-    tech: ['Next.js', 'TypeScript', 'Tailwind', 'shadcn/ui', 'Vercel'],
-    liveUrl: 'https://hiredlens.vercel.app/',
-    repoUrl: 'https://github.com/yashbank/HiredLens',
-    tier: 'production',
-  },
-  {
-    id: 'ai-task-workflow',
-    title: 'AI Task & Workflow Manager',
-    description:
-      'Full-stack productivity app: dashboard insights, task CRUD, drag-and-drop Kanban, and optional AI-assisted suggestions. Next.js 14, Prisma, PostgreSQL, NextAuth, OpenAI — production-ready; public demo is UI-forward for portfolio hosting.',
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
-    imageAlt: 'Desk with notebook representing task planning',
-    tech: ['Next.js 14', 'TypeScript', 'Prisma', 'PostgreSQL', 'Tailwind', 'OpenAI'],
-    liveUrl: 'https://ai-task-workflow-manager-gamma.vercel.app/',
-    repoUrl: 'https://github.com/yashbank/ai-task-workflow-manager',
-    tier: 'build',
-  },
-  {
-    id: 'saas-admin-dashboard',
-    title: 'SaaS Admin Dashboard',
-    description:
-      'Admin-style dashboard for SaaS metrics, users, and configuration — polished tables, charts, and layout patterns suited to real product work. Deployed on Vercel with a clean, responsive UI.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-    imageAlt: 'Analytics charts on a laptop screen',
-    tech: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel', 'React', 'Charts'],
-    liveUrl: 'https://saas-admin-dashboard-sepia.vercel.app/',
-    repoUrl: 'https://github.com/yashbank/saas-admin-dashboard',
-    tier: 'build',
-  },
-  {
-    id: 'wishkart',
-    title: 'Wishkart (Meesho-style clone)',
-    description:
-      'Team project cloning core Meesho flows — lifestyle products, cart, and checkout — strong UI parity, collaboration, and JavaScript fundamentals.',
-    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80',
-    imageAlt: 'E-commerce shopping bags and packages',
-    tech: ['React', 'JavaScript', 'Node', 'MongoDB', 'Team'],
-    liveUrl: 'https://github.com/yashbank/Wishkart--CLONE',
-    repoUrl: 'https://github.com/yashbank/Wishkart--CLONE',
-    tier: 'build',
-  },
-  {
-    id: 'licious',
-    title: 'Licious-style experience',
-    description:
-      'Ordering and delivery UX for fresh products — fast flows, clear CTAs, and a smooth customer journey built with the MERN mindset.',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
-    imageAlt: 'Fresh food ingredients on a kitchen board',
-    tech: ['JavaScript', 'MERN', 'E-commerce', 'REST'],
-    liveUrl: 'https://github.com/yashbank/Licious---CLONE',
-    repoUrl: 'https://github.com/yashbank/Licious---CLONE',
-    tier: 'build',
-  },
-]
+export const TECH_STACK_SECTION = {
+  eyebrow: 'Stack',
+  title: 'Tools behind the work',
+  subtitle: 'One edge-to-edge strip — proximity lifts what matters; the rest stays quiet.',
+} as const
 
 export type ExperienceItem = {
   role: string
   company: string
-  period: string
+  label: string
   summary: string
 }
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    role: 'Software Engineer · Full Stack Developer',
+    role: 'Software Engineer · Full Stack',
     company: 'Iauro Systems',
-    period: '2024 — Present',
+    label: 'Finance · delivery',
     summary:
-      'Building and maintaining features for the Yes Bank Securities domain (finance, stocks). Working across the stack with a focus on reliable delivery, clear APIs, and collaboration with product and stakeholders.',
+      'Building and maintaining features for Yes Bank Securities — reliable APIs, careful UI work alongside product stakeholders, and ownership through release.',
   },
   {
     role: 'Packaged Application Development Associate',
     company: 'Accenture',
-    period: '2023 — 2024',
+    label: 'Telecom · scale',
     summary:
-      'Joined right after college. Delivered work for a UK telecom client (Virgin Media): packaged applications, integration touchpoints, and disciplined engineering in a large delivery environment.',
+      'Virgin Media O2 programme: internal tools in React with Node/Express services, GCP validation workflows, and Airflow monitoring. Work tied to roughly 20% faster validation cycles, 99% data accuracy on supported pipelines, and about 25% less manual effort on the flows I owned.',
   },
   {
     role: 'Full Stack Web Development (certification)',
     company: 'Masai School, Bangalore',
-    period: '2023',
+    label: 'Intensive MERN foundation',
     summary:
-      'Intensive MERN training (long hours, six days a week) with in-depth stack knowledge plus structured training on communication and professional behaviour — solo and team projects throughout.',
+      'Structured full-stack training with sustained delivery cadence — solo and team projects, code review habits, and communication practice that still shapes how I work with clients.',
   },
 ]
 
 export const SERVICES = [
   {
-    title: 'Full stack web development',
+    title: 'Premium websites',
     description:
-      'MERN and Node/Express backends, React frontends, MongoDB/SQL data layers — from MVPs to production fixes.',
+      'Marketing and portfolio experiences with restrained motion, sharp typography, and performance budgets that stay fast on real devices.',
   },
   {
-    title: 'Bug fixes, refactors & delivery',
+    title: 'SaaS MVPs & dashboards',
     description:
-      'Stabilise code under pressure, clear blockers, and ship without drama — remote-friendly and async-first when needed.',
+      'Auth, data models, admin consoles, and customer-facing flows — scoped so you can validate the market without rebuilding from scratch.',
   },
   {
-    title: 'APIs, integrations & cloud',
+    title: 'Internal tools & admin systems',
     description:
-      'REST integrations, Postman-tested flows, and pragmatic use of AWS, GCP, Netlify, and Vercel for hosting and automation.',
+      'Operator-friendly interfaces on top of your existing data and APIs — fewer spreadsheets, clearer permissions, safer workflows.',
+  },
+  {
+    title: 'AI-assisted workflows',
+    description:
+      'Practical integrations: drafting, classification, retrieval, and automation behind review — designed so teams stay in control.',
   },
 ] as const
 
-export const WHY_HIRE = [
+export const PROCESS = [
   {
-    title: 'Proven in demanding environments',
-    body: 'Masai-style intensity, Accenture-scale delivery, and current finance-domain work — I stay effective when timelines and stakes are high.',
+    title: 'Clarity before code',
+    body: 'Short discovery on goals, constraints, and success criteria — so estimates reflect reality and the UI matches how you sell.',
   },
   {
-    title: 'Team player who also ships solo',
-    body: 'Multiple team projects and solo builds; comfortable owning a stream end-to-end or pairing with design and QA.',
+    title: 'Ship in visible slices',
+    body: 'Incremental delivery you can review in the browser — less risk than big-bang handovers, easier to align with stakeholders.',
   },
   {
-    title: 'Global freelance track record',
-    body: '30+ delivered projects across Asia, the UAE, and the US — clear communication, scoping, and follow-through.',
+    title: 'Enterprise-grade habits',
+    body: 'Finance and telecom backgrounds mean I default to sensible error handling, logging discipline, and communication that survives audits and launches.',
   },
   {
-    title: 'Strong fundamentals & curiosity',
-    body: 'From core web stacks to Python, Java, cloud, and modern AI-assisted development — I learn what the problem needs.',
+    title: 'Global freelance execution',
+    body: '30+ delivered engagements across Asia, the GCC, and the US — async-friendly, direct updates, and scope you can trust.',
   },
 ] as const

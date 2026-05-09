@@ -4,7 +4,7 @@ const YEAR = new Date().getFullYear()
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-surface-muted/40 py-16 backdrop-blur-xl">
+    <footer className="site-footer-premium border-t border-white/[0.06] bg-surface-muted/55 py-14 backdrop-blur-sm md:py-16">
       <div className="container-site flex max-w-6xl flex-col items-center justify-between gap-8 md:flex-row md:items-start">
         <div className="text-center md:text-left">
           <p className="font-display text-xl font-semibold tracking-tight text-white/95">
@@ -28,7 +28,7 @@ export function Footer() {
         </div>
       </div>
       <p className="mt-12 text-center text-xs text-gray-600/90">
-        © {YEAR} {SITE.name}. Crafted with React, Tailwind, Framer Motion & GSAP.
+        © {YEAR} {SITE.name}. React, Tailwind, Framer Motion, GSAP; hero uses Three.js procedural mesh.
       </p>
     </footer>
   )

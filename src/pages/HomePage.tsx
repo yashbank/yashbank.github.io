@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Navbar } from '@/components/Navbar'
 import { ScrollProgress } from '@/components/ScrollProgress'
 import { CustomCursor } from '@/components/CustomCursor'
@@ -5,43 +7,52 @@ import { Footer } from '@/components/Footer'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useGsapSetup } from '@/hooks/useGsapSetup'
 import { Hero } from '@/sections/Hero'
-import { About } from '@/sections/About'
-import { Skills } from '@/sections/Skills'
-import { Projects } from '@/sections/Projects'
+import { SelectedWork } from '@/sections/SelectedWork'
+import { TechStack } from '@/sections/TechStack'
 import { Experience } from '@/sections/Experience'
 import { Services } from '@/sections/Services'
-import { WhyHire } from '@/sections/WhyHire'
+import { Process } from '@/sections/Process'
 import { Contact } from '@/sections/Contact'
+import { Archive } from '@/sections/Archive'
 
 const SECTION_IDS = [
   'hero',
-  'about',
-  'skills',
-  'projects',
-  'experience',
+  'work',
   'services',
-  'why-hire',
+  'proof',
+  'process',
+  'archive',
   'contact',
 ] as const
 
 export function HomePage() {
   useGsapSetup()
   const activeId = useActiveSection(SECTION_IDS)
+  const location = useLocation()
+
+  useEffect(() => {
+    const id = location.hash.replace(/^#/, '')
+    if (!id) return
+    const t = window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 80)
+    return () => window.clearTimeout(t)
+  }, [location.hash, location.pathname])
 
   return (
     <div className="min-h-[100svh] bg-surface font-body text-gray-300">
       <CustomCursor />
       <ScrollProgress />
       <Navbar activeId={activeId} />
-      <main className="overflow-x-hidden">
+      <main className="page-main overflow-x-hidden">
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
+        <SelectedWork />
+        <TechStack />
         <Services />
-        <WhyHire />
+        <Experience />
+        <Process />
         <Contact />
+        <Archive />
       </main>
       <Footer />
     </div>

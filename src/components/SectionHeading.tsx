@@ -11,7 +11,7 @@ export function SectionHeading({ eyebrow, title, subtitle }: Props) {
   const t = fadeInUp.transition
 
   return (
-    <div className="mb-14 max-w-2xl md:mb-20">
+    <div className="section-heading mb-12 max-w-2xl md:mb-16 lg:mb-20">
       {eyebrow ? (
         <motion.p
           initial={fadeInUp.initial}

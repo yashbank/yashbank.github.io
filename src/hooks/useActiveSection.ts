@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react'
 
 const DEFAULT_IDS = [
   'hero',
-  'about',
-  'skills',
-  'projects',
-  'experience',
+  'work',
   'services',
-  'why-hire',
+  'proof',
+  'process',
+  'archive',
   'contact',
 ] as const
 

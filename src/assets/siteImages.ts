@@ -35,4 +35,12 @@ export const SITE_IMAGES = {
     desktop: '/images/section-2-desktop.jpg',
     mobile: '/images/hero-mobile.jpg',
   },
+  archive: {
+    desktop: '/images/section-3-desktop.jpg',
+    mobile: '/images/section-3-mobile.jpg',
+  },
+  stack: {
+    desktop: '/images/section-2-desktop.jpg',
+    mobile: '/images/section-2-mobile.jpg',
+  },
 } as const

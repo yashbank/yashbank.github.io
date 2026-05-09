@@ -27,7 +27,7 @@ import {
   SiVscodium,
 } from 'react-icons/si'
 
-/** Minimal monochrome brand marks — keys match `SKILL_CATEGORIES` in content. */
+/** Minimal monochrome brand marks — keys match icon ids used in stack rows and skills grids. */
 const ICONS: Record<string, IconType> = {
   mongodb: SiMongodb,
   express: SiExpress,

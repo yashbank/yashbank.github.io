@@ -1,61 +1,24 @@
-import type { CSSProperties } from 'react'
+/**
+ * Section atmosphere — layered gradients only (no photo textures).
+ * Keeps sections in one visual world: graphite + cool indigo pools, warm mist in light.
+ */
+type SectionBackdropTone = 'default' | 'stack' | 'calm'
 
 type Props = {
-  desktop: string
-  mobile: string
-  /** Photo visibility 0–1 (kept low so type stays readable) */
-  imageOpacity?: number
-  loading?: 'eager' | 'lazy'
-  fetchPriority?: 'high' | 'low' | 'auto'
-  /** Intrinsic hint for CLS (decorative; absolute positioned) */
-  width?: number
-  height?: number
-  /** Extra class on the motion wrapper for group-hover zoom */
+  /** Slightly different radial weight for stack / calmer sections */
+  tone?: SectionBackdropTone
   className?: string
 }
 
-/**
- * Responsive `<picture>`: mobile src under 768px, desktop from 768px up.
- * Soft overlays + optional subtle zoom when parent has `group/section`.
- */
-export function SectionBackdrop({
-  desktop,
-  mobile,
-  imageOpacity = 0.32,
-  loading = 'lazy',
-  fetchPriority = 'auto',
-  width = 1920,
-  height = 1080,
-  className = '',
-}: Props) {
-  const imgStyle: CSSProperties = { opacity: imageOpacity }
-
+export function SectionBackdrop({ tone = 'default', className = '' }: Props) {
   return (
     <div
-      className={`pointer-events-none absolute inset-0 z-0 overflow-hidden ${className}`}
+      className={`section-backdrop section-backdrop--gradient section-backdrop--tone-${tone} pointer-events-none absolute inset-0 z-0 overflow-hidden ${className}`}
       aria-hidden
     >
-      <picture className="absolute inset-0 block h-full min-h-full w-full">
-        <source media="(max-width: 767px)" srcSet={mobile} type="image/jpeg" />
-        <source media="(min-width: 768px)" srcSet={desktop} type="image/jpeg" />
-        <img
-          src={desktop}
-          alt=""
-          width={width}
-          height={height}
-          loading={loading}
-          fetchPriority={fetchPriority}
-          decoding="async"
-          sizes="100vw"
-          style={imgStyle}
-          className="absolute inset-0 h-full min-h-full w-full object-cover object-center transition-[transform,opacity] duration-[1.35s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/section:scale-[1.035]"
-        />
-      </picture>
-      {/* Lighter scrim: photos read clearly while copy stays legible */}
-      <div className="absolute inset-0 bg-surface/38" />
-      <div className="absolute inset-0 bg-gradient-to-b from-surface/78 via-surface/55 to-surface/80" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-accent/[0.04] via-transparent to-vermillion/[0.03]" />
-      <div className="absolute inset-0 backdrop-blur-[1px]" />
+      <div className="section-backdrop__base absolute inset-0" />
+      <div className="section-backdrop__pool absolute inset-0" />
+      <div className="section-backdrop__vignette absolute inset-0" />
     </div>
   )
 }
