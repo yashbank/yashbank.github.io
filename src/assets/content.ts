@@ -2,9 +2,9 @@
 
 export const SITE = {
   name: 'Yash Bankar',
-  title: 'Full-stack product engineer',
+  title: 'AI-native product engineer',
   tagline:
-    'Premium websites, SaaS MVPs, internal tools, and practical AI workflows — for teams that care about craft, clarity, and shipping.',
+    'Factory platforms, marketplaces, SaaS and practical AI workflows, built end to end with the finish of fine craft.',
   email: 'yashbank2002@gmail.com',
   phone: '+91 93566 2313',
   phoneTel: '+91935662313',
@@ -63,6 +63,13 @@ export type ExperienceItem = {
 }
 
 export const EXPERIENCE: ExperienceItem[] = [
+  {
+    role: 'Founder & Lead Developer',
+    company: 'Crestline Technologies',
+    label: 'Product studio · independent',
+    summary:
+      'A small product studio that builds and sells its own software. I architect and ship the platforms: CodeKraft, a studio marketplace with a finance engine, and PlantPulse, a factory operations platform with an offline-first Android kiosk.',
+  },
   {
     role: 'Software Engineer · Full Stack',
     company: 'Iauro Systems',

@@ -318,8 +318,166 @@ const liciousClone: PortfolioProject = {
   ],
 }
 
+
+const plantpulse: PortfolioProject = {
+  slug: 'plantpulse',
+  title: 'PlantPulse',
+  category: 'Factory operations platform',
+  tagline: 'One pulse for your whole plant',
+  cardLead:
+    'QR-kiosk attendance on an offline-first Android tablet, plus payroll, shifts, inventory, production and QC, built for a 300+ employee paper plant.',
+  summary:
+    'PlantPulse replaces paper registers and scattered spreadsheets with one role-aware system: punch in at the gate, payroll at month end, stock and production in between, and quality problems visible the same day.',
+  role: 'Solo developer: web platform, database design, auth and roles, Android kiosk, testing and go-live',
+  problem:
+    'Attendance was hand-marked, payroll recomputed monthly, and stock, production and quality lived in different files, so problems surfaced late.',
+  solution:
+    'A Next.js platform with a thin API over permission-gated, audit-logged server modules, and a Kotlin kiosk that queues punches offline and syncs them with idempotency keys.',
+  keyFeatures: [
+    'QR-badge attendance on a paired kiosk, with offline queue',
+    'Payroll periods, payslips, wage types, overtime and advances',
+    'Shifts, rosters, leave and handover',
+    'Inventory: purchase orders, goods receipt, pick lists, stock ledger',
+    'Production logs, bill of materials and QC checks',
+    '8 roles, with wages visible to the owner only',
+    'Full audit log, TOTP MFA and owner-only backup-then-reset',
+  ],
+  highlights: [
+    '74 data models and 107 pages',
+    '534 test files, including a per-role permission matrix',
+    'Offline punches replay safely: idempotent, never double-counted',
+    'Money computed on the server, never in the browser',
+  ],
+  tech: ['Next.js', 'React', 'TypeScript', 'Prisma', 'Supabase', 'Kotlin', 'Jetpack Compose', 'Room'],
+  liveUrl: 'https://github.com/yashbank/plantpulse',
+  repoUrl: 'https://github.com/yashbank/plantpulse',
+  status: 'flagship',
+  previewLabel: 'Owner dashboard design',
+  imageSrc: 'projects/plantpulse-dashboard.png',
+  imageAlt: 'PlantPulse owner dashboard: output against plan, wastage by phase, orders in flight',
+  previewImageObjectPosition: 'center 0%',
+  themeAccent: 'sky',
+  previewMode: 'image',
+  featured: true,
+  archive: false,
+  workflowHowItWorks:
+    'A worker taps a QR badge at the kiosk. The punch is stored locally, synced with an idempotency key, and feeds attendance, then payroll and reports on the web platform.',
+  detailSections: [
+    {
+      id: 'reliability',
+      title: 'Built for a flaky factory network',
+      body: 'Kiosk punches are queued in a local database and replayed with idempotency keys, so a dropped connection never loses or duplicates a punch. Tablets pair once with a hashed, one-time device token.',
+    },
+    {
+      id: 'governance',
+      title: 'Access and audit',
+      body: 'Every server function starts with a permission gate and logs mutations. Eight roles see exactly what their job needs; wage data never reaches non-owner surfaces.',
+    },
+  ],
+}
+
+const codekraft: PortfolioProject = {
+  slug: 'codekraft',
+  title: 'CodeKraft',
+  category: 'Studio site and product marketplace',
+  tagline: 'A software studio with a real finance engine',
+  cardLead:
+    'Storefront, customer portal and an admin command centre: payments, an append-only ledger, approvals and an AI assistant.',
+  summary:
+    'CodeKraft, a product by Crestline Technologies, is a white-label studio website and digital-product marketplace. It replaces spreadsheets, chat threads and manual payment checks with one system, specified end to end and then hardened for production.',
+  role: 'Product, architecture, full-stack build with AI agents, production hardening and deployment',
+  problem:
+    'Small studios run sales, delivery and finance across disconnected tools, so payments, licences and approvals depend on people remembering.',
+  solution:
+    'A modular Next.js application with a domain layer for finance, payments, orders, entitlements and approvals, plus a customer portal and an admin command centre.',
+  keyFeatures: [
+    'Product catalog, blog, SEO and a live theme studio',
+    'Customer portal: orders, downloads, licences and invoices',
+    'Razorpay checkout and webhooks, coupons, quotes and multi-currency',
+    'Append-only finance ledger and partner allocations',
+    '22-widget admin dashboard, leads and follow-ups',
+    'Second-approval on sensitive actions, audit log and feature flags',
+    'Built-in AI assistant',
+  ],
+  highlights: [
+    '147 pages, 26 API routes, 540+ test files',
+    'CI with lint, typecheck, unit, integration, Playwright and Lighthouse',
+    'Coverage thresholds enforced per module',
+    'Spec-first: 61 diagrams and a decision log',
+  ],
+  tech: ['Next.js', 'React', 'TypeScript', 'Drizzle', 'Neon Postgres', 'Better Auth', 'Razorpay', 'Sentry'],
+  liveUrl: 'https://crestlinetechnologies.in',
+  repoUrl: 'https://github.com/yashbank/CodeKraft',
+  status: 'flagship',
+  previewLabel: 'Live product preview',
+  imageSrc: 'projects/codekraft-cover.png',
+  imageAlt: 'CodeKraft by Crestline Technologies: studio homepage',
+  previewImageObjectPosition: 'center 0%',
+  themeAccent: 'violet',
+  previewMode: 'image',
+  featured: true,
+  archive: false,
+  workflowHowItWorks:
+    'Customers browse and pay through the storefront; orders, entitlements and invoices flow into the portal, while money-moving actions pass through approvals into an append-only ledger.',
+  detailSections: [
+    {
+      id: 'method',
+      title: 'Spec first, agents second',
+      body: 'Every decision is logged and every screen has a specification. Work ran in dependency-ordered phases with tests gating each one, using AI agents under human-owned architecture and review.',
+    },
+  ],
+}
+
+const tradeflow: PortfolioProject = {
+  slug: 'tradeflow',
+  title: 'TradeFlow',
+  category: 'Field-service SaaS',
+  tagline: 'Quote to paid invoice, without retyping',
+  cardLead:
+    'Operating system for skilled-trade businesses: smart quotes, dispatch, a technician hub and one-click invoicing with online payment.',
+  summary:
+    'TradeFlow takes a customer from the first call to a paid invoice on any device, with presets for plumbing, HVAC, electrical, roofing and general contracting.',
+  role: 'Product direction and full-stack implementation',
+  problem:
+    'Trade businesses retype the same details into quotes, job sheets and invoices, and chase payments for weeks.',
+  solution:
+    'One pipeline with live status across quote, job and invoice, an AI estimator, a field technician hub, and Stripe-powered online payment on an exact, integer-based money engine.',
+  keyFeatures: [
+    'Smart quotes: trade presets and an AI estimator',
+    'Technician hub: photos, signature pad, parts on the fly',
+    'One-click invoicing with Stripe payment links',
+    'Five trade presets in one app',
+    'Bring-your-own OpenAI, Resend and Stripe keys',
+  ],
+  highlights: ['Integer-based money engine', 'Supabase with row-level security', 'Full product docs: PRD, SRS, schema, security'],
+  tech: ['Next.js', 'React', 'TypeScript', 'Supabase', 'Stripe', 'OpenAI', 'Tailwind CSS'],
+  liveUrl: 'https://tradeflow-cyan-nu.vercel.app',
+  repoUrl: 'https://github.com/yashbank/TradeFlow',
+  status: 'production',
+  previewLabel: 'Live product preview',
+  imageSrc: 'projects/tradeflow-cover.png',
+  imageAlt: 'TradeFlow landing page: dispatch and invoicing for trade businesses',
+  previewImageObjectPosition: 'center 0%',
+  themeAccent: 'rose',
+  previewMode: 'image',
+  featured: true,
+  archive: false,
+  workflowHowItWorks:
+    'A call becomes a quote, the quote becomes a dispatched job, field work adds photos and parts, and the finished job becomes an invoice the customer can pay online.',
+  detailSections: [
+    {
+      id: 'money',
+      title: 'Exact money',
+      body: 'Taxes, discounts, line items and partial payments run on an integer-based calculation engine, so totals never drift by a cent.',
+    },
+  ],
+}
+
 /** Canonical order for navigation and prev/next */
 export const ALL_PROJECTS: readonly PortfolioProject[] = [
+  plantpulse,
+  codekraft,
+  tradeflow,
   clinq,
   sarthak,
   starHealth,
