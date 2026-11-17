@@ -56,7 +56,8 @@ export function CustomCursor() {
       if (ringEl) {
         const scale = hov ? 1.55 : 1
         ringEl.style.transform = `translate(${ring.x}px, ${ring.y}px) translate(-50%, -50%) scale(${scale})`
-        ringEl.style.borderColor = hov ? 'rgba(217, 184, 119, 0.85)' : 'rgba(217, 184, 119, 0.35)'
+        const rgb = document.documentElement.dataset.theme === 'light' ? '150, 46, 27' : '217, 184, 119'
+        ringEl.style.borderColor = hov ? `rgba(${rgb}, 0.85)` : `rgba(${rgb}, 0.4)`
       }
       if (dotEl) {
         dotEl.style.transform = `translate(${dot.x}px, ${dot.y}px) translate(-50%, -50%) scale(${hov ? 0.85 : 1})`
