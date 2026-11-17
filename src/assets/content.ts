@@ -6,10 +6,10 @@ export const SITE = {
   tagline:
     'Factory platforms, marketplaces, SaaS and practical AI workflows, built end to end with the finish of fine craft.',
   email: 'yashbank2002@gmail.com',
-  phone: '+91 93566 2313',
-  phoneTel: '+91935662313',
-  whatsapp: '+91 93566 2313',
-  whatsappLink: 'https://wa.me/91935662313',
+  phone: '+91 93566 23153',
+  phoneTel: '+919356623153',
+  whatsapp: '+91 93566 23153',
+  whatsappLink: 'https://wa.me/919356623153',
   location: 'Maharashtra, India',
   /** When set, Navbar shows Resume (file must exist under `public/`). Omit until the PDF is added. */
   resumePath: null as string | null,

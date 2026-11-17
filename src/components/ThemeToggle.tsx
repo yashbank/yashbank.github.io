@@ -14,7 +14,7 @@ export function ThemeToggle({ className = '' }: Props) {
       type="button"
       role="switch"
       aria-checked={!isDark}
-      onClick={toggleTheme}
+      onClick={() => toggleTheme()}
       className={`inline-flex min-h-[44px] min-w-[44px] shrink-0 touch-manipulation items-center justify-center rounded-full border-0 bg-transparent p-0 shadow-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/45 focus-visible:ring-offset-2 focus-visible:ring-offset-surface ${className}`}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Light appearance' : 'Dark appearance'}
