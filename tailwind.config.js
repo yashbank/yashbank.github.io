@@ -5,15 +5,26 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Syne', 'system-ui', 'sans-serif'],
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
         body: ['Inter', 'system-ui', 'sans-serif'],
         jp: ['"Zen Kaku Gothic New"', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
+        /* Champagne-gold system: remaps legacy violet/sky/fuchsia utilities site-wide */
+        violet: { 50:'#fdf9ef',100:'#f8eed3',200:'#f0dca6',300:'#e6c577',400:'#d9ad4f',500:'#c9963a',600:'#ad7a2d',700:'#8a5f27',800:'#6f4c25',900:'#5b3f22',950:'#33220f' },
+        indigo: { 300:'#e6c577',400:'#d9ad4f',500:'#c9963a',600:'#ad7a2d' },
+        purple: { 300:'#e6c577',400:'#d9ad4f',500:'#c9963a' },
+        sky: { 300:'#f3e3c3',400:'#e9d2a0',500:'#d8b878',600:'#bf9a58' },
+        cyan: { 300:'#f3e3c3',400:'#e9d2a0',500:'#d8b878' },
+        fuchsia: { 200:'#f2cfc2',300:'#e9b3a1',400:'#dca08c',500:'#c98770' },
+        gold: { DEFAULT:'#d9b877', light:'#f1e0b4', deep:'#9c7a3c' },
+        ivory: '#f5efe4',
         accent: {
-          DEFAULT: '#9f8fff',
-          soft: '#c4b8ff',
-          dim: 'rgba(159, 143, 255, 0.1)',
+          DEFAULT: '#d9b877',
+          soft: '#efdcae',
+          dim: 'rgba(217, 184, 119, 0.1)',
         },
         vermillion: {
           DEFAULT: '#e85d6f',
@@ -30,9 +41,9 @@ export default {
         glass:
           '0 4px 24px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.04) inset',
         soft: '0 20px 56px -28px rgba(0, 0, 0, 0.55)',
-        glow: '0 0 64px rgba(159, 143, 255, 0.07)',
-        'glow-sm': '0 0 32px rgba(159, 143, 255, 0.09)',
-        'glow-lg': '0 20px 80px -32px rgba(159, 143, 255, 0.12)',
+        glow: '0 0 64px rgba(217, 184, 119, 0.08)',
+        'glow-sm': '0 0 32px rgba(217, 184, 119, 0.1)',
+        'glow-lg': '0 20px 80px -32px rgba(217, 184, 119, 0.16)',
       },
       backgroundImage: {
         'mesh-gradient':

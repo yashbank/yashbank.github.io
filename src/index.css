@@ -5,9 +5,9 @@
 @layer base {
   :root,
   [data-theme='dark'] {
-    --color-surface: 9 10 16;
-    --color-surface-elevated: 16 17 26;
-    --color-surface-muted: 21 22 34;
+    --color-surface: 8 8 10;
+    --color-surface-elevated: 15 15 19;
+    --color-surface-muted: 22 21 27;
   }
 
   [data-theme='light'] {
@@ -1004,3 +1004,45 @@
 [data-theme='light'] .project-detail nav[aria-label='Breadcrumb'] .text-gray-700 {
   @apply text-stone-400;
 }
+
+
+/* ============ LUXE LAYER (champagne gold on ink) ============ */
+@layer base {
+  html { scroll-behavior: auto; }
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+  .lenis.lenis-stopped { overflow: hidden; }
+  body {
+    background-image:
+      radial-gradient(ellipse 90% 60% at 50% -18%, rgba(217,184,119,0.10), transparent 56%),
+      radial-gradient(ellipse 60% 40% at 100% 8%, rgba(201,150,58,0.05), transparent 50%),
+      radial-gradient(ellipse 50% 40% at -6% 96%, rgba(217,184,119,0.04), transparent 52%) !important;
+  }
+  ::selection { background: rgba(217,184,119,0.32); color: #fff; }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+  body::after { /* film grain */
+    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: .06; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+@layer components {
+  .text-gradient { @apply bg-gradient-to-br from-white via-[#f5efe4] to-[#d9b877] bg-clip-text text-transparent; }
+  .text-gradient-accent { background-image: linear-gradient(100deg,#f1e0b4 0%,#d9b877 45%,#b88a3e 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .btn-primary { background-image: linear-gradient(115deg,#f1e0b4 0%,#d9b877 50%,#b88a3e 100%) !important; color: #1a1306 !important; box-shadow: 0 10px 40px -12px rgba(217,184,119,.45) !important; }
+  .btn-nav-primary { background-image: linear-gradient(115deg,#f1e0b4,#d9b877 55%,#b88a3e) !important; color:#1a1306 !important; }
+  .luxe-label { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: rgba(217,184,119,.85); }
+  .luxe-rule { height: 1px; background: linear-gradient(90deg, transparent, rgba(217,184,119,.45), transparent); }
+  .luxe-outline { -webkit-text-stroke: 1px rgba(245,239,228,.35); color: transparent; }
+  .luxe-card { position: relative; border-radius: 28px; border: 1px solid rgba(217,184,119,.14); background: linear-gradient(160deg, rgba(255,255,255,.045), rgba(255,255,255,.012)); backdrop-filter: blur(14px); box-shadow: 0 30px 80px -40px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.06); }
+  .luxe-card::before { content:''; position:absolute; inset:0; border-radius:inherit; padding:1px; background: linear-gradient(140deg, rgba(241,224,180,.5), transparent 35%, transparent 65%, rgba(217,184,119,.3)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none; opacity:.7; }
+}
+@media (max-width: 767px) { body::after { opacity: .035; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; } }
+
+/* LUXE buttons / helpers */
+@layer components {
+  .btn-ghost { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 1.75rem; border-radius:9999px; border:1px solid rgba(217,184,119,.4); color:#efdcae; font-size:.875rem; letter-spacing:.04em; transition:background .3s,border-color .3s; }
+  .btn-ghost:hover { background:rgba(217,184,119,.1); border-color:rgba(217,184,119,.8); }
+}
+.hscroll-track { will-change: transform; }
+@keyframes yb-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }

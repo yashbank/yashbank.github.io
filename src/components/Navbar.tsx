@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 import { SITE } from '@/assets/content'
 import { SiteLogo } from '@/components/SiteLogo'
-import { ThemeToggle } from '@/components/ThemeToggle'
+import { scrollToId } from '@/hooks/useLenis'
 
 const LINKS = [
   { id: 'work', label: 'Work' },
@@ -22,13 +22,12 @@ export function Navbar({ activeId }: Props) {
   const isHome = location.pathname === '/'
 
   const scrollTo = (id: string) => {
-    const el = document.getElementById(id)
-    el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    scrollToId(id)
     setOpen(false)
   }
 
   return (
-    <header className="site-header sticky top-0 z-50 border-b border-white/[0.06] bg-surface/70 shadow-[inset_0_-1px_0_rgba(255,255,255,0.04)] backdrop-blur-md transition-colors duration-300 supports-[backdrop-filter]:bg-surface/55">
+    <header className="site-header fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-surface/70 shadow-[inset_0_-1px_0_rgba(255,255,255,0.04)] backdrop-blur-md transition-colors duration-300 supports-[backdrop-filter]:bg-surface/55">
       <nav
         className="container-site flex max-w-6xl items-center justify-between gap-4 py-4"
         aria-label="Primary"
@@ -100,7 +99,6 @@ export function Navbar({ activeId }: Props) {
         </ul>
 
         <div className="hidden items-center gap-2 lg:flex lg:gap-3">
-          <ThemeToggle />
           {SITE.resumePath ? (
             <a
               href={SITE.resumePath}
@@ -129,7 +127,6 @@ export function Navbar({ activeId }: Props) {
         </div>
 
         <div className="flex items-center gap-2.5 pl-0.5 lg:hidden">
-          <ThemeToggle />
           <button
             type="button"
             className="nav-focus flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2.5 transition-colors duration-200 ease-out hover:bg-white/10"

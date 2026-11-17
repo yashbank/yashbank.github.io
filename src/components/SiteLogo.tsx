@@ -23,7 +23,7 @@ export function SiteLogo() {
           Yash Bankar
         </span>
         <span className="mt-0.5 font-display text-[9px] font-medium uppercase tracking-[0.18em] text-gray-500">
-          Full-stack
+          AI · Product
         </span>
       </span>
     </span>
