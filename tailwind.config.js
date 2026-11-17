@@ -4,26 +4,26 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--f-body)', 'system-ui', 'sans-serif'],
+        display: ['var(--f-display)', 'Georgia', 'serif'],
+        serif: ['var(--f-display)', 'Georgia', 'serif'],
+        mono: ['var(--f-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        body: ['var(--f-body)', 'system-ui', 'sans-serif'],
         jp: ['"Zen Kaku Gothic New"', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         /* Champagne-gold system: remaps legacy violet/sky/fuchsia utilities site-wide */
-        violet: { 50:'#fdf9ef',100:'#f8eed3',200:'#f0dca6',300:'#e6c577',400:'#d9ad4f',500:'#c9963a',600:'#ad7a2d',700:'#8a5f27',800:'#6f4c25',900:'#5b3f22',950:'#33220f' },
-        indigo: { 300:'#e6c577',400:'#d9ad4f',500:'#c9963a',600:'#ad7a2d' },
-        purple: { 300:'#e6c577',400:'#d9ad4f',500:'#c9963a' },
-        sky: { 300:'#f3e3c3',400:'#e9d2a0',500:'#d8b878',600:'#bf9a58' },
-        cyan: { 300:'#f3e3c3',400:'#e9d2a0',500:'#d8b878' },
+        violet: { 50:'rgb(var(--v50) / <alpha-value>)',100:'rgb(var(--v100) / <alpha-value>)',200:'rgb(var(--v200) / <alpha-value>)',300:'rgb(var(--v300) / <alpha-value>)',400:'rgb(var(--v400) / <alpha-value>)',500:'rgb(var(--v500) / <alpha-value>)',600:'rgb(var(--v600) / <alpha-value>)',700:'rgb(var(--v700) / <alpha-value>)',800:'rgb(var(--v800) / <alpha-value>)',900:'rgb(var(--v900) / <alpha-value>)',950:'rgb(var(--v950) / <alpha-value>)' },
+        indigo: { 300:'rgb(var(--v300) / <alpha-value>)',400:'rgb(var(--v400) / <alpha-value>)',500:'rgb(var(--v500) / <alpha-value>)',600:'rgb(var(--v600) / <alpha-value>)' },
+        purple: { 300:'rgb(var(--v300) / <alpha-value>)',400:'rgb(var(--v400) / <alpha-value>)',500:'rgb(var(--v500) / <alpha-value>)' },
+        sky: { 300:'rgb(var(--v200) / <alpha-value>)',400:'rgb(var(--v300) / <alpha-value>)',500:'rgb(var(--v400) / <alpha-value>)',600:'rgb(var(--v500) / <alpha-value>)' },
+        cyan: { 300:'rgb(var(--v200) / <alpha-value>)',400:'rgb(var(--v300) / <alpha-value>)',500:'rgb(var(--v400) / <alpha-value>)' },
         fuchsia: { 200:'#f2cfc2',300:'#e9b3a1',400:'#dca08c',500:'#c98770' },
         gold: { DEFAULT:'#d9b877', light:'#f1e0b4', deep:'#9c7a3c' },
         ivory: '#f5efe4',
         accent: {
-          DEFAULT: '#d9b877',
-          soft: '#efdcae',
+          DEFAULT: 'rgb(var(--accent) / <alpha-value>)',
+          soft: 'rgb(var(--accent-soft) / <alpha-value>)',
           dim: 'rgba(217, 184, 119, 0.1)',
         },
         vermillion: {
